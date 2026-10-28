@@ -214,3 +214,116 @@ body {
     justify-content: space-between;
     transition: border-color 0.2s, transform 0.2s;
 }
+
+.project-card:hover {
+    border-color: #38bdf8;
+    transform: translateY(-4px);
+}
+
+/* CAIXA DAS IMAGENS DOS PROJETOS */
+.project-img-box {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #2a364f;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.project-icon {
+    font-size: 1.5em;
+    color: #38bdf8;
+}
+
+.project-card h3 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #f8fafc;
+}
+
+.project-card p {
+    color: #94a3b8;
+    font-size: 0.9em;
+}
+
+.tags {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    background-color: #0f172a;
+    color: #38bdf8;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-family: monospace;
+}
+
+.card-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.card-links a:hover {
+    color: #38bdf8;
+}
+
+/* CONTACT */
+.contact-box {
+    background: linear-gradient(135deg, #161e2e, #0f172a);
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #2a364f;
+}
+
+/* ESTILO CLEAN PARA O EMAIL */
+.email-clean {
+    margin: 15px 0 25px 0;
+    font-size: 1em;
+    color: #94a3b8;
+}
+
+.email-clean span {
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+    font-size: 0.85em;
+    border-top: 1px solid #1e293b;
+}
