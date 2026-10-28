@@ -1,140 +1,54 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matheus Alfonso | Cybersecurity & Application Security Analyst</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome para Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-
-    <!-- NAV BAR -->
-    <nav class="navbar">
-        <div class="logo">Matheus<span>Alfonso</span></div>
-        <ul class="nav-links">
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#contact">Contato</a></li>
-        </ul>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <header class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Matheus Alfonso<span class="dot">.</span></h1>
-                <h2>Cybersecurity Analyst & Threat Prevention</h2>
-                <p>Atuação na camada preventiva da <strong>ALEGO</strong>, mitigação de Phishing/Engenharia Social e desenvolvimento web defensivo em PHP, Python e OWASP Top 10.</p>
-                
-                <!-- BOTÕES DO TOPO -->
-                <div class="hero-buttons">
-                    <a href="https://www.linkedin.com/in/mattheusalfonso" target="_blank" class="btn btn-primary"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="https://github.com/MattheusAlfonso" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="https://wa.me/55629920038598?text=Ol%C3%A1%20Mattheus,%20vi%20seu%20portf%C3%B3lio%20de%20Ciberseguran%C3%A7a%20e%20gostaria%20de%20conversar!" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                </div>
-            </div>
-            
-            <!-- FOTO DE PERFIL COM SHADOW NEON -->
-            <div class="hero-avatar">
-                <img src="profile.jpg" alt="Mattheus Alfonso" class="avatar-img">
-            </div>
-        </div>
-    </header>
-
-    <!-- SOBRE MIM -->
+<!-- SOBRE MIM + COMPETÊNCIAS TÉCNICAS (LADO A LADO) -->
     <section id="about" class="section">
-        <h2 class="section-title">Sobre Mim</h2>
-        <div class="about-card">
-            <p>Profissional de Segurança da Informação com experiência prática corporativa na Assembleia Legislativa de Goiás (ALEGO), com foco em higiene digital, triagem de incidentes e prevenção de engenharia social[cite: 5].</p>
-            <div class="info-grid">
-                <div><strong>Localização:</strong> Goiânia, GO (Remoto)</div>
-                <div><strong>Foco:</strong> AppSec / Threat Intel</div>
-                <div><strong>Idiomas:</strong> PT (Nativo), EN (Avançado), ES (Intermediário)[cite: 5]</div>
-                <div><strong>Graduação:</strong> B.S. Segurança da Informação (2027)[cite: 5]</div>
-            </div>
-        </div>
-    </section>
+        <div class="about-container">
+            
+            <!-- COLUNA DA ESQUERDA: SOBRE MIM -->
+            <div class="about-text-column">
+                <h2 class="section-title-left">Sobre mim</h2>
+                <div class="about-card">
+                    <p>Profissional de Segurança da Informação com experiência prática corporativa na Assembleia Legislativa de Goiás (ALEGO), atuando na camada preventiva, higiene digital, triagem de incidentes e mitigação de ameaças de Engenharia Social (Phishing)[cite: 5, 7].</p>
 
-    <!-- PROJETOS EM DESTAQUE -->
-    <section id="projects" class="section">
-        <h2 class="section-title">Projetos em Destaque</h2>
-        <div class="projects-grid">
+                    <p>Cursando Bacharelado em Segurança da Informação (previsão 2027), busco constante evolução técnica unindo fundamentos de redes, análise de dados e desenvolvimento defensivo[cite: 5]. Utilizo <strong>SQL</strong> para modelagem e consulta estruturada de dados, <strong>Python</strong> para automação, análise de dados e rotinas de cibersegurança, e <strong>Java</strong> para lógica orientada a objetos e regras de negócio robustas, integrando conhecimento de segurança web e controle de dados[cite: 5].</p>
 
-            <!-- Card 1 -->
-            <div class="project-card">
-                <div class="project-img-box">
-                    <img src="https://raw.githubusercontent.com/MattheusAlfonso/01-input-validation-security/main/preview.png" alt="XSS Mitigation Preview" class="project-img">
-                </div>
-                <div class="card-header">
-                    <i class="fas fa-shield-alt project-icon"></i>
-                    <h3>01. Input Validation & XSS Mitigation</h3>
-                </div>
-                <p>Engine de validação e sanitização de dados no backend com PHP e HTML5, neutralizando payloads maliciosos de XSS via htmlspecialchars e filter_var[cite: 1, 5].</p>
-                <div class="tags">
-                    <span>PHP</span> <span>HTML5</span> <span>XSS</span> <span>OWASP</span>
-                </div>
-                <div class="card-links">
-                    <a href="https://github.com/MattheusAlfonso/01-input-validation-security" target="_blank"><i class="fab fa-github"></i> Repositório</a>
+                    <div class="info-grid">
+                        <div><strong>Localização:</strong> Goiânia, GO (Remoto)[cite: 5, 7]</div>
+                        <div><strong>Foco Atual:</strong> AppSec / Threat Intel / Prevenção[cite: 5, 7]</div>
+                        <div><strong>Idiomas:</strong> PT (Nativo), EN (Avançado), ES (Intermediário)[cite: 5, 7]</div>
+                        <div><strong>Graduação:</strong> B.S. Segurança da Informação (2027)[cite: 5, 7]</div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="project-card">
-                <div class="project-img-box">
-                    <img src="https://raw.githubusercontent.com/MattheusAlfonso/secure-auth-system/main/preview.png" alt="Secure Auth Preview" class="project-img">
-                </div>
-                <div class="card-header">
-                    <i class="fas fa-lock project-icon"></i>
-                    <h3>02. Secure Authentication System</h3>
-                </div>
-                <p>Sistema de autenticação defensiva com hash de senha seguro (bcrypt/Argon2id), defesa contra Session Fixation (session_regenerate_id) e bloqueio a Broken Access Control[cite: 1, 5].</p>
-                <div class="tags">
-                    <span>PHP</span> <span>Security</span> <span>Sessions</span> <span>OWASP A01</span>
-                </div>
-                <div class="card-links">
-                    <a href="https://github.com/MattheusAlfonso/secure-auth-system" target="_blank"><i class="fab fa-github"></i> Repositório</a>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="project-card">
-                <div class="project-img-box">
-                    <img src="https://raw.githubusercontent.com/MattheusAlfonso/email-header-analyzer/main/preview.png" alt="Phishing Analyzer Preview" class="project-img">
-                </div>
-                <div class="card-header">
-                    <i class="fas fa-envelope-open-text project-icon"></i>
-                    <h3>03. Email Header & Phishing Analyzer</h3>
-                </div>
-                <p>Ferramenta de Threat Intel para parsing de cabeçalhos brutos (raw headers), extração de IoCs (IP, From, Return-Path), checagem de SPF/DKIM/DMARC e score de risco.</p>
-                <div class="tags">
-                    <span>PHP</span> <span>Regex</span> <span>Phishing</span> <span>Threat Intel</span>
-                </div>
-                <div class="card-links">
-                    <a href="https://github.com/MattheusAlfonso/email-header-analyzer" target="_blank"><i class="fab fa-github"></i> Repositório</a>
+            <!-- COLUNA DA DIREITA: COMPETÊNCIAS TÉCNICAS -->
+            <div class="skills-column">
+                <h2 class="skills-title">Competências técnicas</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <span class="skill-name">Python & Automação</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">SQL & Banco de Dados</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Java & Programação OO</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">PHP & Desenvol. Defensivo</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">OWASP Top 10 & AppSec</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Análise de Phishing & Headers</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Linux, Bash & Shell Script</span>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Git, GitHub & Versionamento</span>
+                    </div>
                 </div>
             </div>
 
         </div>
     </section>
-
-    <!-- CONTATO -->
-    <section id="contact" class="section">
-        <div class="contact-box">
-            <h2>Vamos conversar?</h2>
-            <p>Aberto a oportunidades internacionais e remotas em Cibersegurança / Application Security.</p>
-            <p class="email-clean">E-mail Direto: <span>ederson.alfonso@icloud.com</span></p>
-            <div class="contact-buttons">
-                <a href="https://wa.me/55629920038598?text=Ol%C3%A1%20Mattheus,%20vi%20seu%20portf%C3%B3lio%20de%20Ciberseguran%C3%A7a%20e%20gostaria%20de%20conversar!" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                <a href="https://www.linkedin.com/in/mattheusalfonso" target="_blank" class="btn btn-primary"><i class="fab fa-linkedin"></i> Mensagem no LinkedIn</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Matheus Alfonso. Desenvolvido para Portfólio de Cibersegurança.</p>
-    </footer>
-
-</body>
-</html>
