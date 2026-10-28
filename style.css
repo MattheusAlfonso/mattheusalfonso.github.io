@@ -67,9 +67,9 @@ body {
     color: var(--accent-blue);
 }
 
-/* HERO SECTION (AJUSTADO PARA APROXIMAR DO SOBRE MIM) */
+/* HERO SECTION (COMPACTO PARA MANTER O SOBRE MIM PRÓXIMO) */
 .hero {
-    padding: 110px 8% 30px 8%; /* Reduzido o padding no fundo */
+    padding: 110px 8% 30px 8%;
     display: flex;
     align-items: center;
 }
@@ -181,12 +181,11 @@ body {
 
 /* SEÇÃO SOBRE MIM & COMPETÊNCIAS */
 .section {
-    padding: 50px 8%; /* Espaçamento geral ajustado */
+    padding: 50px 8%;
 }
 
 #about {
-    padding-top: 20px; /* Puxa o "Sobre Mim" mais para cima */
-    padding-bottom: 50px;
+    padding-top: 20px;
 }
 
 .about-container {
@@ -253,12 +252,6 @@ body {
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-primary);
-}
-@media (max-width: 992px) {
-    .about-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
 }
 
 /* PROJETOS GRID */
@@ -408,7 +401,7 @@ footer {
     border-top: 1px solid var(--border-color);
 }
 
-/* RESPONSIVIDADE */
+/* RESPONSIVIDADE PARA DISPOSITIVOS MÓVEIS */
 @media (max-width: 992px) {
     .about-container {
         grid-template-columns: 1fr;
