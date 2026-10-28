@@ -288,3 +288,13 @@ footer {
     gap: 15px;
     margin-top: 20px;
 }
+/* BOTÃO DO WHATSAPP */
+.btn-whatsapp {
+    background-color: #25d366;
+    color: #0b0f19;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebc57;
+    color: #ffffff;
+}
