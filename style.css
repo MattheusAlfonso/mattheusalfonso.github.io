@@ -276,10 +276,11 @@ footer {
 .email-display code {
     background-color: #0f172a;
     color: #38bdf8;
-    padding: 6px 12px;
+    padding: 8px 14px;
     border-radius: 6px;
     border: 1px solid #334155;
     font-size: 0.95em;
+    font-family: monospace;
 }
 
 .contact-buttons {
@@ -287,6 +288,7 @@ footer {
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 /* BOTÃO DO WHATSAPP */
 .btn-whatsapp {
