@@ -213,6 +213,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     transition: border-color 0.2s, transform 0.2s;
+    overflow: hidden;
 }
 
 .project-card:hover {
@@ -220,14 +221,16 @@ body {
     transform: translateY(-4px);
 }
 
-/* CAIXA DAS IMAGENS DOS PROJETOS */
+/* CAIXA DAS IMAGENS DOS PROJETOS COM BLOQUEIO DE VAZAMENTO */
 .project-img-box {
     width: 100%;
     height: 160px;
+    max-height: 160px;
     overflow: hidden;
     border-radius: 6px;
     margin-bottom: 15px;
     border: 1px solid #2a364f;
+    background-color: #0f172a;
 }
 
 .project-img {
@@ -236,6 +239,7 @@ body {
     object-fit: cover;
     object-position: top;
     transition: transform 0.3s ease;
+    display: block;
 }
 
 .project-card:hover .project-img {
