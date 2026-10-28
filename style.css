@@ -186,6 +186,7 @@ body {
 
 #about {
     padding-top: 20px; /* Puxa o "Sobre Mim" mais para cima */
+    padding-bottom: 50px;
 }
 
 .about-container {
@@ -252,6 +253,12 @@ body {
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-primary);
+}
+@media (max-width: 992px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }
 
 /* PROJETOS GRID */
