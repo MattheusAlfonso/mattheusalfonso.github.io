@@ -221,11 +221,11 @@ body {
     transform: translateY(-4px);
 }
 
-/* CAIXA DAS IMAGENS DOS PROJETOS COM BLOQUEIO DE VAZAMENTO */
+/* CAIXA DAS IMAGENS DOS PROJETOS (SEM CORTES) */
 .project-img-box {
     width: 100%;
-    height: 160px;
-    max-height: 160px;
+    height: 170px;
+    max-height: 170px;
     overflow: hidden;
     border-radius: 6px;
     margin-bottom: 15px;
@@ -236,8 +236,8 @@ body {
 .project-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: top;
+    object-fit: contain; /* Ajusta a print completa sem cortar nada */
+    background-color: #0f172a;
     transition: transform 0.3s ease;
     display: block;
 }
@@ -308,8 +308,8 @@ body {
 /* ESTILO CLEAN PARA O EMAIL */
 .email-clean {
     margin: 15px 0 25px 0;
-    font-size: 1em;
-    color: #94a3b8;
+    font-size: 1.05em;
+    color: #cbd5e1;
 }
 
 .email-clean span {
