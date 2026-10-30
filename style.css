@@ -432,3 +432,35 @@ footer {
         font-size: 2.8rem;
     }
 }
+
+/* SELETOR DE IDIOMA */
+.lang-switch {
+    display: flex;
+    gap: 4px;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    border-radius: 6px;
+    padding: 2px;
+}
+
+.nav-links .lang-switch a {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.nav-links .lang-switch a.active {
+    background-color: var(--accent-blue);
+    color: #0b1120;
+}
+
+/* NAVBAR NO CELULAR: só logo + idioma (a página é de rolagem única) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 14px 16px;
+    }
+
+    .nav-links li:not(.lang-switch) {
+        display: none;
+    }
+}
