@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://raw.githubusercontent.com; style-src 'self' https://cdnjs.cloudflare.com; font-src https://cdnjs.cloudflare.com; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1120">
+    <title>Input Validation &amp; XSS Mitigation | Matheus Alfonso</title>
+    <meta name="description" content="Por que escapar a entrada não basta para impedir XSS? Pequena aplicação web que mostra os dois hábitos que barram a maior parte das falhas de injeção: validar a entrada contra uma allowlist e codificar a saída para o contexto em que ela é exibida.">
+    <link rel="alternate" hreflang="pt-BR" href="https://mattheusalfonso.github.io/projetos/input-validation-security.html">
+    <link rel="alternate" hreflang="es" href="https://mattheusalfonso.github.io/projetos/input-validation-security-es.html">
+    <link rel="alternate" hreflang="en" href="https://mattheusalfonso.github.io/projetos/input-validation-security-en.html">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mattheusalfonso.github.io/projetos/input-validation-security.html">
+    <meta property="og:title" content="Input Validation &amp; XSS Mitigation | Matheus Alfonso">
+    <meta property="og:description" content="Por que escapar a entrada não basta para impedir XSS? Pequena aplicação web que mostra os dois hábitos que barram a maior parte das falhas de injeção: validar a entrada contra uma allowlist e codificar a saída para o contexto em que ela é exibida.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/MattheusAlfonso/01-input-validation-security/main/preview.png">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <header class="navwrap">
+        <nav class="container nav">
+            <a class="brand" href="../index.html">Matheus<span>.Alfonso</span></a>
+            <div class="navlinks"><a href="../index.html#about">Sobre</a><a href="../index.html#projects">Projetos</a><a href="../index.html#contact">Contato</a></div>
+            <div class="lang-switch"><i class="fas fa-globe" aria-hidden="true"></i><a href="input-validation-security.html" class="active" aria-current="true">PT</a><a href="input-validation-security-es.html" lang="es">ES</a><a href="input-validation-security-en.html" lang="en">EN</a></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <div class="container">
+                <a class="backlink" href="../index.html#projects"><i class="fas fa-arrow-left" aria-hidden="true"></i> Voltar aos projetos</a>
+                <div class="eyebrow"><i class="fas fa-shield-halved" aria-hidden="true"></i> APPSEC · PHP</div>
+                <h1>Input Validation &amp; XSS Mitigation</h1>
+                <p class="question">Por que escapar a entrada não basta para impedir XSS?</p>
+                <p class="lead">Pequena aplicação web que mostra os dois hábitos que barram a maior parte das falhas de injeção: validar a entrada contra uma allowlist e codificar a saída para o contexto em que ela é exibida.</p>
+                <div class="pills"><span>PHP 8</span><span>Allowlist validation</span><span>Output encoding</span><span>CSRF tokens</span><span>Content-Security-Policy</span></div>
+                <div class="buttons">
+                    <a class="btn primary" href="https://github.com/MattheusAlfonso/01-input-validation-security" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Ver código no GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">Por dentro do projeto</div>
+                    <h2>Do problema à solução</h2>
+                </div>
+                <div class="detail-grid"><div class="detail-block"><h3>Objetivo</h3><p>Simular um formulário de analista onde usuário, e-mail e uma URL suspeita são enviados para inspeção, e mostrar como cada campo é defendido.</p></div><div class="detail-block"><h3>Decisão principal</h3><p>A primeira versão escapava os dados assim que chegavam. Funcionava numa página, mas o valor guardado virava HTML: quebrava em URL, JSON ou SQL e era escapado duas vezes. A versão atual guarda o valor original, rejeita o que não bate com a allowlist e escapa só na hora de renderizar.</p></div><div class="detail-block"><h3>Camadas de defesa</h3><p>Allowlist com regex e <code>FILTER_VALIDATE_EMAIL</code>, URLs aceitas só com esquema http/https (<code>javascript:</code> e <code>data:</code> são barradas), token CSRF comparado com <code>hash_equals()</code> e uma CSP sem scripts inline como segunda camada.</p></div><div class="detail-block"><h3>O que aprendi</h3><p>Escapar não é validar: <code>htmlspecialchars()</code> deixa o dado seguro para HTML, não seguro em geral. Allowlists são mais fortes que blocklists. E a CSP segura o ataque mesmo se um bug de codificação passar.</p></div></div>
+                <h3 class="subhead">Destaques</h3>
+                <div class="pills highlight"><span>OWASP A03 · Injection</span><span>Allowlist</span><span>Output encoding</span><span>Token CSRF</span><span>CSP sem inline</span></div>
+            </div>
+        </section>
+
+        <section class="section alt">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">Telas</div>
+                    <h2>O projeto funcionando</h2>
+                </div>
+                <div class="shots"><figure class="shot"><img src="https://raw.githubusercontent.com/MattheusAlfonso/01-input-validation-security/main/preview.png" alt="Relatório de validação: o payload de XSS é rejeitado e aparece como texto inerte." width="533" height="374"><figcaption>Relatório de validação: o payload de XSS é rejeitado e aparece como texto inerte.</figcaption></figure></div>
+                <h3 class="subhead">Como rodar</h3>
+                <pre class="code"><code>git clone https://github.com/MattheusAlfonso/01-input-validation-security.git
+cd 01-input-validation-security
+php -S localhost:8000</code></pre>
+                <div class="project-nav">
+                    <a class="backlink" href="../index.html#projects"><i class="fas fa-arrow-left" aria-hidden="true"></i> Voltar aos projetos</a>
+                    <a class="next-link" href="pythreatintel.html">
+                        <span>Próximo projeto</span><strong>PyThreatIntel <i class="fas fa-arrow-right" aria-hidden="true"></i></strong>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">&copy; 2026 Matheus Alfonso · Portfólio de Cibersegurança</div>
+    </footer>
+</body>
+</html>

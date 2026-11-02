@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://raw.githubusercontent.com; style-src 'self' https://cdnjs.cloudflare.com; font-src https://cdnjs.cloudflare.com; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1120">
+    <title>PyThreatIntel | Matheus Alfonso</title>
+    <meta name="description" content="Esse e-mail é phishing? E dá para provar? Ferramenta de linha de comando que lê um arquivo .eml e entrega uma avaliação de ameaça: autenticação do remetente, sinais de spoofing, IoCs extraídos e reputação do IP de origem no VirusTotal. Feita como projeto de SOC / blue team para triagem de phishing.">
+    <link rel="alternate" hreflang="pt-BR" href="https://mattheusalfonso.github.io/projetos/pythreatintel.html">
+    <link rel="alternate" hreflang="es" href="https://mattheusalfonso.github.io/projetos/pythreatintel-es.html">
+    <link rel="alternate" hreflang="en" href="https://mattheusalfonso.github.io/projetos/pythreatintel-en.html">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mattheusalfonso.github.io/projetos/pythreatintel.html">
+    <meta property="og:title" content="PyThreatIntel | Matheus Alfonso">
+    <meta property="og:description" content="Esse e-mail é phishing? E dá para provar? Ferramenta de linha de comando que lê um arquivo .eml e entrega uma avaliação de ameaça: autenticação do remetente, sinais de spoofing, IoCs extraídos e reputação do IP de origem no VirusTotal. Feita como projeto de SOC / blue team para triagem de phishing.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/MattheusAlfonso/pythreatintel/main/img/samples-phishing.png">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <header class="navwrap">
+        <nav class="container nav">
+            <a class="brand" href="../index.html">Matheus<span>.Alfonso</span></a>
+            <div class="navlinks"><a href="../index.html#about">Sobre</a><a href="../index.html#projects">Projetos</a><a href="../index.html#contact">Contato</a></div>
+            <div class="lang-switch"><i class="fas fa-globe" aria-hidden="true"></i><a href="pythreatintel.html" class="active" aria-current="true">PT</a><a href="pythreatintel-es.html" lang="es">ES</a><a href="pythreatintel-en.html" lang="en">EN</a></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <div class="container">
+                <a class="backlink" href="../index.html#projects"><i class="fas fa-arrow-left" aria-hidden="true"></i> Voltar aos projetos</a>
+                <div class="eyebrow"><i class="fas fa-shield-virus" aria-hidden="true"></i> THREAT INTEL · PYTHON</div>
+                <h1>PyThreatIntel</h1>
+                <p class="question">Esse e-mail é phishing? E dá para provar?</p>
+                <p class="lead">Ferramenta de linha de comando que lê um arquivo .eml e entrega uma avaliação de ameaça: autenticação do remetente, sinais de spoofing, IoCs extraídos e reputação do IP de origem no VirusTotal. Feita como projeto de SOC / blue team para triagem de phishing.</p>
+                <div class="pills"><span>Python</span><span>email.parser</span><span>ipaddress</span><span>requests</span><span>VirusTotal API v3</span><span>JSON</span></div>
+                <div class="buttons">
+                    <a class="btn primary" href="https://github.com/MattheusAlfonso/pythreatintel" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Ver código no GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">Por dentro do projeto</div>
+                    <h2>Do problema à solução</h2>
+                </div>
+                <div class="detail-grid"><div class="detail-block"><h3>Objetivo</h3><p>Transformar a sensação de que "esse e-mail parece estranho" em evidência concreta e explicável, no formato que um analista de SOC usaria numa triagem.</p></div><div class="detail-block"><h3>Como funciona</h3><p>O e-mail é lido com o parser padrão do Python. A cadeia <code>Received</code> é percorrida de baixo para cima até o primeiro IP público, que é o servidor mais próximo do remetente. Faixas privadas são descartadas com o módulo <code>ipaddress</code>.</p></div><div class="detail-block"><h3>Decisões de segurança</h3><p>Só o <code>Authentication-Results</code> do topo é confiável, porque é o que o seu servidor adicionou. O domínio real é extraído do endereço, não do nome de exibição, o que derruba o truque <code>"support@bank.com" &lt;attacker@evil.com&gt;</code>. A chave do VirusTotal vem de variável de ambiente, nunca da linha de comando.</p></div><div class="detail-block"><h3>Limitações conhecidas</h3><p>Remetentes de e-mail em massa (Mailchimp, SendGrid) geram falso positivo de Return-Path. Só o IP de origem é consultado no VirusTotal; URLs e hashes ainda não. Suporte a IPv6 está no roadmap.</p></div></div>
+                <h3 class="subhead">Destaques</h3>
+                <div class="pills highlight"><span>Score de risco 0–100</span><span>SPF · DKIM · DMARC</span><span>IoCs: URLs + SHA256</span><span>Saída JSON para SIEM</span><span>Anti-spoofing de nome de exibição</span></div>
+            </div>
+        </section>
+
+        <section class="section alt">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">Telas</div>
+                    <h2>O projeto funcionando</h2>
+                </div>
+                <div class="shots"><figure class="shot"><img src="https://raw.githubusercontent.com/MattheusAlfonso/pythreatintel/main/img/samples-phishing.png" alt="Análise do e-mail de phishing de exemplo: score 95/100, risco HIGH." width="991" height="438"><figcaption>Análise do e-mail de phishing de exemplo: score 95/100, risco HIGH.</figcaption></figure><figure class="shot"><img src="https://raw.githubusercontent.com/MattheusAlfonso/pythreatintel/main/img/samples-legit.png" alt="E-mail legítimo e autenticado: score 0, risco LOW." width="967" height="356"><figcaption>E-mail legítimo e autenticado: score 0, risco LOW.</figcaption></figure><figure class="shot"><img src="https://raw.githubusercontent.com/MattheusAlfonso/pythreatintel/main/img/samples-phishing-json.png" alt="Relatório completo em JSON (`--json`), pronto para um pipeline de SIEM." width="1079" height="821"><figcaption>Relatório completo em JSON (<code>--json</code>), pronto para um pipeline de SIEM.</figcaption></figure></div>
+                <h3 class="subhead">Como rodar</h3>
+                <pre class="code"><code>git clone https://github.com/MattheusAlfonso/pythreatintel.git
+cd pythreatintel
+pip install -r requirements.txt
+python3 analyzer.py samples/phishing_sample.eml --json</code></pre>
+                <div class="project-nav">
+                    <a class="backlink" href="../index.html#projects"><i class="fas fa-arrow-left" aria-hidden="true"></i> Voltar aos projetos</a>
+                    <a class="next-link" href="secure-auth-system.html">
+                        <span>Próximo projeto</span><strong>Secure Authentication System <i class="fas fa-arrow-right" aria-hidden="true"></i></strong>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">&copy; 2026 Matheus Alfonso · Portfólio de Cibersegurança</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://raw.githubusercontent.com; style-src 'self' https://cdnjs.cloudflare.com; font-src https://cdnjs.cloudflare.com; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1120">
+    <title>Email Header &amp; Phishing Analyzer | Matheus Alfonso</title>
+    <meta name="description" content="What do an e-mail&#x27;s headers reveal about who really sent it? A web triage tool: paste the raw headers of a suspicious e-mail and get the sender indicators, SPF/DKIM/DMARC results, domain-alignment checks and a 0–100 risk score with the reason for every point.">
+    <link rel="alternate" hreflang="pt-BR" href="https://mattheusalfonso.github.io/projetos/email-header-analyzer.html">
+    <link rel="alternate" hreflang="es" href="https://mattheusalfonso.github.io/projetos/email-header-analyzer-es.html">
+    <link rel="alternate" hreflang="en" href="https://mattheusalfonso.github.io/projetos/email-header-analyzer-en.html">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mattheusalfonso.github.io/projetos/email-header-analyzer-en.html">
+    <meta property="og:title" content="Email Header &amp; Phishing Analyzer | Matheus Alfonso">
+    <meta property="og:description" content="What do an e-mail&#x27;s headers reveal about who really sent it? A web triage tool: paste the raw headers of a suspicious e-mail and get the sender indicators, SPF/DKIM/DMARC results, domain-alignment checks and a 0–100 risk score with the reason for every point.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/MattheusAlfonso/email-header-analyzer/main/preview.png">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <header class="navwrap">
+        <nav class="container nav">
+            <a class="brand" href="../en.html">Matheus<span>.Alfonso</span></a>
+            <div class="navlinks"><a href="../en.html#about">About</a><a href="../en.html#projects">Projects</a><a href="../en.html#contact">Contact</a></div>
+            <div class="lang-switch"><i class="fas fa-globe" aria-hidden="true"></i><a href="email-header-analyzer.html" lang="pt-BR">PT</a><a href="email-header-analyzer-es.html" lang="es">ES</a><a href="email-header-analyzer-en.html" class="active" aria-current="true">EN</a></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <div class="container">
+                <a class="backlink" href="../en.html#projects"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to projects</a>
+                <div class="eyebrow"><i class="fas fa-envelope-open-text" aria-hidden="true"></i> PHISHING TRIAGE · PHP</div>
+                <h1>Email Header &amp; Phishing Analyzer</h1>
+                <p class="question">What do an e-mail&#x27;s headers reveal about who really sent it?</p>
+                <p class="lead">A web triage tool: paste the raw headers of a suspicious e-mail and get the sender indicators, SPF/DKIM/DMARC results, domain-alignment checks and a 0–100 risk score with the reason for every point.</p>
+                <div class="pills"><span>PHP 8</span><span>Regex</span><span>SPF / DKIM / DMARC</span><span>RFC 5322</span><span>Content-Security-Policy</span></div>
+                <div class="buttons">
+                    <a class="btn primary" href="https://github.com/MattheusAlfonso/email-header-analyzer" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> View code on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">Inside the project</div>
+                    <h2>From problem to solution</h2>
+                </div>
+                <div class="detail-grid"><div class="detail-block"><h3>Goal</h3><p>It comes from my work in security awareness and phishing prevention: give objective evidence to decide whether an e-mail is a threat.</p></div><div class="detail-block"><h3>How it works</h3><p>Each indicator adds points: DMARC fail (+30), SPF fail (+25), DKIM fail (+25), Reply-To on another domain (+20, a classic BEC tactic) and a mismatched Return-Path (+15). Subdomains of the same domain count as aligned.</p></div><div class="detail-block"><h3>Parsing decisions</h3><p>Headers are matched at the start of the line (<code>^From:</code>), so <code>X-Original-From</code> is not mistaken for <code>From</code>. Folded headers are unfolded per RFC 5322. Text is parsed raw and escaped only on output.</p></div><div class="detail-block"><h3>Security of the tool itself</h3><p>It processes attacker-controlled text, so it is hardened too: every output is HTML-encoded, input is capped at 64 KB and a strict Content-Security-Policy blocks any script.</p></div></div>
+                <h3 class="subhead">Highlights</h3>
+                <div class="pills highlight"><span>Explainable 0–100 score</span><span>SPF · DKIM · DMARC</span><span>BEC detection</span><span>RFC 5322</span><span>Input capped at 64 KB</span></div>
+            </div>
+        </section>
+
+        <section class="section alt">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">Screens</div>
+                    <h2>The project in action</h2>
+                </div>
+                <div class="shots"><figure class="shot"><img src="https://raw.githubusercontent.com/MattheusAlfonso/email-header-analyzer/main/preview.png" alt="Header analysis of a phishing e-mail, with the risk score and the reason for every point." width="1421" height="683"><figcaption>Header analysis of a phishing e-mail, with the risk score and the reason for every point.</figcaption></figure></div>
+                <h3 class="subhead">How to run it</h3>
+                <pre class="code"><code>git clone https://github.com/MattheusAlfonso/email-header-analyzer.git
+cd email-header-analyzer
+php -S localhost:8000</code></pre>
+                <div class="project-nav">
+                    <a class="backlink" href="../en.html#projects"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to projects</a>
+                    <a class="next-link" href="input-validation-security-en.html">
+                        <span>Next project</span><strong>Input Validation &amp; XSS Mitigation <i class="fas fa-arrow-right" aria-hidden="true"></i></strong>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">&copy; 2026 Matheus Alfonso · Cybersecurity Portfolio</div>
+    </footer>
+</body>
+</html>
