@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://raw.githubusercontent.com; style-src 'self' https://cdnjs.cloudflare.com; font-src https://cdnjs.cloudflare.com; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1120">
+    <title>Secure Authentication System | Matheus Alfonso</title>
+    <meta name="description" content="¿Cómo resiste un login a la fuerza bruta, el secuestro de sesión y el CSRF? Flujo login → panel restringido → logout construido para mostrar los controles detrás de una autenticación segura: hash de contraseña, sesión endurecida, control de acceso centralizado, protección contra fuerza bruta y defensa contra CSRF.">
+    <link rel="alternate" hreflang="pt-BR" href="https://mattheusalfonso.github.io/projetos/secure-auth-system.html">
+    <link rel="alternate" hreflang="es" href="https://mattheusalfonso.github.io/projetos/secure-auth-system-es.html">
+    <link rel="alternate" hreflang="en" href="https://mattheusalfonso.github.io/projetos/secure-auth-system-en.html">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mattheusalfonso.github.io/projetos/secure-auth-system-es.html">
+    <meta property="og:title" content="Secure Authentication System | Matheus Alfonso">
+    <meta property="og:description" content="¿Cómo resiste un login a la fuerza bruta, el secuestro de sesión y el CSRF? Flujo login → panel restringido → logout construido para mostrar los controles detrás de una autenticación segura: hash de contraseña, sesión endurecida, control de acceso centralizado, protección contra fuerza bruta y defensa contra CSRF.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/MattheusAlfonso/secure-auth-system/main/preview.png">
+    <meta property="og:locale" content="es_LA">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <header class="navwrap">
+        <nav class="container nav">
+            <a class="brand" href="../es.html">Matheus<span>.Alfonso</span></a>
+            <div class="navlinks"><a href="../es.html#about">Sobre mí</a><a href="../es.html#projects">Proyectos</a><a href="../es.html#contact">Contacto</a></div>
+            <div class="lang-switch"><i class="fas fa-globe" aria-hidden="true"></i><a href="secure-auth-system.html" lang="pt-BR">PT</a><a href="secure-auth-system-es.html" class="active" aria-current="true">ES</a><a href="secure-auth-system-en.html" lang="en">EN</a></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-hero">
+            <div class="container">
+                <a class="backlink" href="../es.html#projects"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a los proyectos</a>
+                <div class="eyebrow"><i class="fas fa-lock" aria-hidden="true"></i> APPSEC · PHP</div>
+                <h1>Secure Authentication System</h1>
+                <p class="question">¿Cómo resiste un login a la fuerza bruta, el secuestro de sesión y el CSRF?</p>
+                <p class="lead">Flujo login → panel restringido → logout construido para mostrar los controles detrás de una autenticación segura: hash de contraseña, sesión endurecida, control de acceso centralizado, protección contra fuerza bruta y defensa contra CSRF.</p>
+                <div class="pills"><span>PHP 8</span><span>Sessions</span><span>bcrypt</span><span>CSRF tokens</span><span>Content-Security-Policy</span></div>
+                <div class="buttons">
+                    <a class="btn primary" href="https://github.com/MattheusAlfonso/secure-auth-system" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Ver código en GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">Por dentro del proyecto</div>
+                    <h2>Del problema a la solución</h2>
+                </div>
+                <div class="detail-grid"><div class="detail-block"><h3>Objetivo</h3><p>Demostrar, en un flujo pequeño y verificable, los controles que exige el OWASP Top 10 en A01 (Broken Access Control) y A07 (Identification &amp; Authentication Failures).</p></div><div class="detail-block"><h3>Cómo funciona</h3><p>La contraseña se guarda solo como hash bcrypt (costo 12). Tras el login el ID de sesión se regenera, las cookies salen con <code>HttpOnly</code> y <code>SameSite=Strict</code>, y la sesión expira tras 5 min de inactividad o 30 min en total.</p></div><div class="detail-block"><h3>Decisiones de seguridad</h3><p>El contador de intentos vive en el servidor, no en la sesión: si no, bastaría borrar la cookie para volver a intentar. <code>password_verify()</code> se ejecuta incluso para usuarios inexistentes, para que el tiempo de respuesta no revele qué usuarios existen. El panel muestra solo una huella SHA-256 de la sesión, nunca el ID real.</p></div><div class="detail-block"><h3>Pruebas de defensa</h3><p>Abrir <code>/dashboard.php</code> sin login redirige. 5 contraseñas erróneas bloquean durante 15 minutos, incluso borrando las cookies. Logout por GET devuelve 405 y login sin token CSRF devuelve 403.</p></div></div>
+                <h3 class="subhead">Destacados</h3>
+                <div class="pills highlight"><span>bcrypt costo 12</span><span>5 intentos → 15 min</span><span>Defensa contra Session Fixation</span><span>OWASP A01 · A07</span><span>CSRF en login y logout</span></div>
+            </div>
+        </section>
+
+        <section class="section alt">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">Pantallas</div>
+                    <h2>El proyecto en funcionamiento</h2>
+                </div>
+                <div class="shots"><figure class="shot"><img src="https://raw.githubusercontent.com/MattheusAlfonso/secure-auth-system/main/preview.png" alt="Panel restringido tras el login, con la huella de la sesión en lugar del ID real." width="840" height="543"><figcaption>Panel restringido tras el login, con la huella de la sesión en lugar del ID real.</figcaption></figure></div>
+                <h3 class="subhead">Cómo ejecutarlo</h3>
+                <pre class="code"><code>git clone https://github.com/MattheusAlfonso/secure-auth-system.git
+cd secure-auth-system
+php -S localhost:8000</code></pre>
+                <div class="project-nav">
+                    <a class="backlink" href="../es.html#projects"><i class="fas fa-arrow-left" aria-hidden="true"></i> Volver a los proyectos</a>
+                    <a class="next-link" href="email-header-analyzer-es.html">
+                        <span>Siguiente proyecto</span><strong>Email Header &amp; Phishing Analyzer <i class="fas fa-arrow-right" aria-hidden="true"></i></strong>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">&copy; 2026 Matheus Alfonso · Portafolio de Ciberseguridad</div>
+    </footer>
+</body>
+</html>

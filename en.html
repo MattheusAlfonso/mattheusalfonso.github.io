@@ -5,7 +5,8 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://raw.githubusercontent.com; style-src 'self' https://cdnjs.cloudflare.com; font-src https://cdnjs.cloudflare.com; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matheus Alfonso | Cybersecurity & Application Security Analyst</title>
+    <meta name="theme-color" content="#0b1120">
+    <title>Matheus Alfonso | Cybersecurity &amp; Application Security Analyst</title>
     <meta name="description" content="Portfolio of Matheus Alfonso: Application Security, phishing prevention and defensive web development.">
     <link rel="alternate" hreflang="pt-BR" href="https://mattheusalfonso.github.io/">
     <link rel="alternate" hreflang="es" href="https://mattheusalfonso.github.io/es.html">
@@ -14,213 +15,151 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mattheusalfonso.github.io/en.html">
-    <meta property="og:title" content="Matheus Alfonso | Cybersecurity & Application Security Analyst">
+    <meta property="og:title" content="Matheus Alfonso | Cybersecurity &amp; Application Security Analyst">
     <meta property="og:description" content="Portfolio of Matheus Alfonso: Application Security, phishing prevention and defensive web development.">
     <meta property="og:image" content="https://mattheusalfonso.github.io/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome para Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
-
-    <!-- NAV BAR -->
-    <nav class="navbar">
-        <div class="logo">Matheus<span>.Alfonso</span></div>
-        <ul class="nav-links">
-            <li><a href="#about">About & Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="lang-switch"><a href="index.html" lang="pt-BR">PT</a><a href="es.html" lang="es">ES</a><a href="en.html" class="active" aria-current="true">EN</a></li>
-        </ul>
-    </nav>
-
-    <!-- HERO SECTION (COM BIO EMBAIXO DO NOME) -->
-    <header class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <span class="hero-subtitle">CYBERSECURITY · APPLICATION SECURITY</span>
-                <h1>Matheus Alfonso<span class="dot">.</span></h1>
-                
-                <!-- BIO CURTA EMBAIXO DO NOME -->
-                <p class="hero-bio">
-                    Information Security Analyst focused on the preventive layer, digital hygiene and defensive web development. I work with PHP, Python, Java, SQL and OWASP Top 10 guidelines, connecting technology, threat prevention and secure development.
-                </p>
-                
-                <!-- BOTÕES DO TOPO -->
-                <div class="hero-buttons">
-                    <a href="https://www.linkedin.com/in/mattheusalfonso" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="https://github.com/MattheusAlfonso" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="cv-en.pdf" download="CV-Matheus-Alfonso-EN.pdf" class="btn btn-secondary"><i class="fas fa-file-arrow-down"></i> Resume</a>
-                    <a href="https://wa.me/5562920038598?text=Hi%20Matheus,%20I%20saw%20your%20Cybersecurity%20portfolio%20and%20would%20like%20to%20talk!" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                </div>
-            </div>
-            
-            <!-- FOTO DE PERFIL COM SHADOW NEON -->
-            <div class="hero-avatar">
-                <img src="profile.jpg" alt="Matheus Alfonso" class="avatar-img">
-            </div>
-        </div>
+    <header class="navwrap">
+        <nav class="container nav">
+            <a class="brand" href="en.html">Matheus<span>.Alfonso</span></a>
+            <div class="navlinks"><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+            <div class="lang-switch"><i class="fas fa-globe" aria-hidden="true"></i><a href="index.html" lang="pt-BR">PT</a><a href="es.html" lang="es">ES</a><a href="en.html" class="active" aria-current="true">EN</a></div>
+        </nav>
     </header>
 
-    <!-- SOBRE MIM + COMPETÊNCIAS TÉCNICAS (LADO A LADO) -->
-    <section id="about" class="section">
-        <div class="about-container">
-            
-            <!-- COLUNA DA ESQUERDA: SOBRE MIM -->
-            <div class="about-text-column">
-                <h2 class="section-title-left">About me</h2>
-                <div class="about-card">
-                    <p>Information Security professional with hands-on experience at the Legislative Assembly of Goiás (ALEGO, Brazil), working on the preventive layer, digital hygiene, OPSEC, suspicious e-mail triage and mitigation of Social Engineering (Phishing) threats.</p>
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <div class="eyebrow">Cybersecurity · Application Security</div>
+                    <h1>Matheus<br><em>Alfonso.</em></h1>
+                    <p class="lead">Information Security Analyst focused on the preventive layer, digital hygiene and defensive web development. I work with PHP, Python, Java, SQL and OWASP Top 10 guidelines, connecting technology, threat prevention and secure development.</p>
+                    <div class="buttons">
+                        <a class="btn primary" href="#projects"><i class="fas fa-shield-halved" aria-hidden="true"></i> View projects</a>
+                        <a class="btn" href="https://www.linkedin.com/in/mattheusalfonso" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+                        <a class="btn" href="https://github.com/MattheusAlfonso" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                        <a class="btn" href="cv-en.pdf" download="CV-Matheus-Alfonso-EN.pdf"><i class="fas fa-file-arrow-down" aria-hidden="true"></i> Resume</a>
+                        <a class="btn whatsapp" href="https://wa.me/5562920038598?text=Hi%20Matheus,%20I%20saw%20your%20Cybersecurity%20portfolio%20and%20would%20like%20to%20talk!" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+                    </div>
+                </div>
+                <div class="portrait">
+                    <img class="profile-photo" src="profile.jpg" alt="Matheus Alfonso" width="400" height="400">
+                    <div class="portrait-label">AppSec · Phishing · Python</div>
+                </div>
+            </div>
+        </section>
 
-                    <p>Currently pursuing a Technologist Degree in Cybersecurity at Anhembi Morumbi University (expected 2028), I keep growing technically by combining networking fundamentals, data analysis and defensive development. I use <strong>SQL</strong> for data modeling and structured queries, <strong>Python</strong> for automation, data analysis and security routines, and <strong>Java</strong> for object-oriented logic and robust business rules, bringing web security and data control together. I also use AI in my daily development work, operating <strong>Claude Code</strong> for security code review, testing and documentation, always understanding and validating every change.</p>
-
-                    <div class="info-grid">
-                        <div><strong>Location:</strong> Goiânia, Brazil (Remote / Open to relocation)</div>
-                        <div><strong>Current focus:</strong> AppSec / Phishing Prevention / OPSEC</div>
-                        <div><strong>Languages:</strong> PT (Native), EN (Advanced), ES (Intermediate)</div>
-                        <div><strong>Education:</strong> Technologist Degree in Cybersecurity — Anhembi Morumbi (2026–2028)</div>
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">Who I am</div>
+                    <h2>About me</h2>
+                </div>
+                <div class="about">
+                    <div class="about-text">
+                        <p>Information Security professional with hands-on experience at the Legislative Assembly of Goiás (ALEGO, Brazil), working on the preventive layer, digital hygiene, OPSEC, suspicious e-mail triage and mitigation of Social Engineering (Phishing) threats.</p><p>I keep growing technically by combining networking fundamentals, data analysis and defensive development. I use <strong>SQL</strong> for data modeling and structured queries, <strong>Python</strong> for automation, data analysis and security routines, and <strong>Java</strong> for object-oriented logic and robust business rules, bringing web security and data control together.</p><p>I also use AI in my daily development work, operating <strong>Claude Code</strong> for security code review, testing and documentation, always understanding and validating every change.</p>
+                        <div class="facts"><div><strong>Location</strong><span>Goiânia, Brazil (Remote / Open to relocation)</span></div><div><strong>Current focus</strong><span>AppSec / Phishing Prevention / OPSEC</span></div><div><strong>Languages</strong><span>PT (Native), EN (Advanced), ES (Intermediate)</span></div></div>
+                        <div class="education">
+                            <div class="eyebrow">Education</div>
+                            <h3 class="subhead">Academic background</h3>
+                            <strong>Technologist Degree in Cybersecurity</strong>
+                            <span>Anhembi Morumbi University · 2026–2028 (expected)</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="subhead">Technical skills</h3>
+                        <div class="skill-list"><div class="skill"><span>Python &amp; Automation</span><i class="fas fa-chevron-right" aria-hidden="true"></i></div><div class="skill"><span>SQL &amp; Databases</span><i class="fas fa-chevron-right" aria-hidden="true"></i></div><div class="skill"><span>Java &amp; Programming</span><i class="fas fa-chevron-right" aria-hidden="true"></i></div><div class="skill"><span>PHP &amp; Defensive Development</span><i class="fas fa-chevron-right" aria-hidden="true"></i></div><div class="skill"><span>OWASP Top 10 &amp; AppSec</span><i class="fas fa-chevron-right" aria-hidden="true"></i></div><div class="skill"><span>Phishing &amp; Header Analysis</span><i class="fas fa-chevron-right" aria-hidden="true"></i></div><div class="skill"><span>Linux, Bash &amp; Shell Script</span><i class="fas fa-chevron-right" aria-hidden="true"></i></div><div class="skill"><span>Git, GitHub &amp; Version Control</span><i class="fas fa-chevron-right" aria-hidden="true"></i></div><div class="skill"><span>Applied AI &amp; Claude Code</span><i class="fas fa-chevron-right" aria-hidden="true"></i></div></div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- COLUNA DA DIREITA: COMPETÊNCIAS TÉCNICAS -->
-            <div class="skills-column">
-                <h2 class="skills-title">Technical skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <span class="skill-name">Python & Automation</span>
+        <section class="section alt" id="projects">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">Portfolio</div>
+                    <h2>Featured projects</h2>
+                    <p>Security tools and applications built from scratch, each with a threat model, defense tests and documentation in three languages. Click a project to see its screens and how it works inside.</p>
+                </div>
+                <div class="projects">
+                <article class="project project-featured">
+                    <div class="project-image"><img src="https://raw.githubusercontent.com/MattheusAlfonso/pythreatintel/main/img/samples-phishing.png" alt="PyThreatIntel" width="991" height="438" loading="lazy"></div>
+                    <div class="project-body">
+                        <div class="eyebrow"><i class="fas fa-shield-virus" aria-hidden="true"></i> THREAT INTEL · PYTHON</div>
+                        <h3><a class="stretched" href="projetos/pythreatintel-en.html">PyThreatIntel</a></h3>
+                        <p>Command-line tool for phishing triage of .eml files: validates SPF/DKIM/DMARC, traces the origin IP through the Received chain, detects sender spoofing, extracts IoCs and checks IP reputation on VirusTotal. JSON output for SIEM pipelines.</p>
+                        <div class="tags"><span>Python</span><span>email.parser</span><span>ipaddress</span><span>requests</span></div>
+                        <div class="project-links">
+                            <span class="textlink">View project <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            <a class="github-link" href="https://github.com/MattheusAlfonso/pythreatintel" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Code on GitHub</a>
+                        </div>
                     </div>
-                    <div class="skill-item">
-                        <span class="skill-name">SQL & Databases</span>
+                </article>
+                <article class="project">
+                    <div class="project-image"><img src="https://raw.githubusercontent.com/MattheusAlfonso/secure-auth-system/main/preview.png" alt="Secure Authentication System" width="840" height="543" loading="lazy"></div>
+                    <div class="project-body">
+                        <div class="eyebrow"><i class="fas fa-lock" aria-hidden="true"></i> APPSEC · PHP</div>
+                        <h3><a class="stretched" href="projetos/secure-auth-system-en.html">Secure Authentication System</a></h3>
+                        <p>bcrypt-hashed login with brute-force lockout, Session Fixation and timing-attack defenses, CSRF tokens, hardened cookies and centralized access control.</p>
+                        <div class="tags"><span>PHP 8</span><span>Sessions</span><span>bcrypt</span><span>CSRF tokens</span></div>
+                        <div class="project-links">
+                            <span class="textlink">View project <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            <a class="github-link" href="https://github.com/MattheusAlfonso/secure-auth-system" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Code on GitHub</a>
+                        </div>
                     </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Java & Programming</span>
+                </article>
+                <article class="project">
+                    <div class="project-image"><img src="https://raw.githubusercontent.com/MattheusAlfonso/email-header-analyzer/main/preview.png" alt="Email Header &amp; Phishing Analyzer" width="1421" height="683" loading="lazy"></div>
+                    <div class="project-body">
+                        <div class="eyebrow"><i class="fas fa-envelope-open-text" aria-hidden="true"></i> PHISHING TRIAGE · PHP</div>
+                        <h3><a class="stretched" href="projetos/email-header-analyzer-en.html">Email Header &amp; Phishing Analyzer</a></h3>
+                        <p>Suspicious e-mail triage: extracts IoCs (IP, From, Return-Path, Reply-To), reads SPF/DKIM/DMARC from the trusted header and produces an explainable risk score, flagging BEC tactics.</p>
+                        <div class="tags"><span>PHP 8</span><span>Regex</span><span>SPF / DKIM / DMARC</span><span>RFC 5322</span></div>
+                        <div class="project-links">
+                            <span class="textlink">View project <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            <a class="github-link" href="https://github.com/MattheusAlfonso/email-header-analyzer" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Code on GitHub</a>
+                        </div>
                     </div>
-                    <div class="skill-item">
-                        <span class="skill-name">PHP & Defensive Development</span>
+                </article>
+                <article class="project">
+                    <div class="project-image"><img src="https://raw.githubusercontent.com/MattheusAlfonso/01-input-validation-security/main/preview.png" alt="Input Validation &amp; XSS Mitigation" width="533" height="374" loading="lazy"></div>
+                    <div class="project-body">
+                        <div class="eyebrow"><i class="fas fa-shield-halved" aria-hidden="true"></i> APPSEC · PHP</div>
+                        <h3><a class="stretched" href="projetos/input-validation-security-en.html">Input Validation &amp; XSS Mitigation</a></h3>
+                        <p>Allowlist input validation and context-aware output encoding to neutralize XSS. Blocks <code>javascript:</code> URLs and enforces CSRF tokens and a strict Content-Security-Policy.</p>
+                        <div class="tags"><span>PHP 8</span><span>Allowlist validation</span><span>Output encoding</span><span>CSRF tokens</span></div>
+                        <div class="project-links">
+                            <span class="textlink">View project <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                            <a class="github-link" href="https://github.com/MattheusAlfonso/01-input-validation-security" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Code on GitHub</a>
+                        </div>
                     </div>
-                    <div class="skill-item">
-                        <span class="skill-name">OWASP Top 10 & AppSec</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Phishing & Header Analysis</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Linux, Bash & Shell Script</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Git, GitHub & Version Control</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Applied AI & Claude Code</span>
-                    </div>
+                </article>
                 </div>
             </div>
+        </section>
 
-        </div>
-    </section>
-
-    <!-- PROJETOS EM DESTAQUE -->
-    <section id="projects" class="section">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-
-            <!-- Card 1 -->
-            <div class="project-card">
-                <div class="project-img-box">
-                    <img src="https://raw.githubusercontent.com/MattheusAlfonso/01-input-validation-security/main/preview.png" alt="XSS Mitigation Preview" class="project-img">
-                </div>
-                <div class="card-header">
-                    <i class="fas fa-shield-alt project-icon"></i>
-                    <h3>01. Input Validation & XSS Mitigation</h3>
-                </div>
-                <p>Allowlist input validation and context-aware output encoding to neutralize XSS. Blocks <code>javascript:</code> URLs and enforces CSRF tokens and a strict Content-Security-Policy.</p>
-                <div class="tags">
-                    <span>PHP</span> <span>XSS</span> <span>CSRF</span> <span>CSP</span> <span>OWASP A03</span>
-                </div>
-                <div class="card-links">
-                    <a href="https://github.com/MattheusAlfonso/01-input-validation-security" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="eyebrow">Contact</div>
+                <h2>Let&#x27;s talk</h2>
+                <p>Open to remote and relocation opportunities in Cybersecurity / Application Security across Latin America.</p>
+                <p class="email">Direct e-mail: <span>ederson.alfonso@icloud.com</span></p>
+                <div class="buttons">
+                    <a class="btn whatsapp" href="https://wa.me/5562920038598?text=Hi%20Matheus,%20I%20saw%20your%20Cybersecurity%20portfolio%20and%20would%20like%20to%20talk!" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+                    <a class="btn primary" href="https://www.linkedin.com/in/mattheusalfonso" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> Message on LinkedIn</a>
+                    <a class="btn" href="cv-en.pdf" download="CV-Matheus-Alfonso-EN.pdf"><i class="fas fa-file-arrow-down" aria-hidden="true"></i> Download resume (PDF)</a>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <!-- Card 2 -->
-            <div class="project-card">
-                <div class="project-img-box">
-                    <img src="https://raw.githubusercontent.com/MattheusAlfonso/secure-auth-system/main/preview.png" alt="Secure Auth Preview" class="project-img">
-                </div>
-                <div class="card-header">
-                    <i class="fas fa-lock project-icon"></i>
-                    <h3>02. Secure Authentication System</h3>
-                </div>
-                <p>bcrypt-hashed login with brute-force lockout, Session Fixation and timing-attack defenses, CSRF tokens, hardened cookies and centralized access control.</p>
-                <div class="tags">
-                    <span>PHP</span> <span>Sessions</span> <span>Brute Force</span> <span>OWASP A01</span> <span>A07</span>
-                </div>
-                <div class="card-links">
-                    <a href="https://github.com/MattheusAlfonso/secure-auth-system" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="project-card">
-                <div class="project-img-box">
-                    <img src="https://raw.githubusercontent.com/MattheusAlfonso/email-header-analyzer/main/preview.png" alt="Phishing Analyzer Preview" class="project-img">
-                </div>
-                <div class="card-header">
-                    <i class="fas fa-envelope-open-text project-icon"></i>
-                    <h3>03. Email Header & Phishing Analyzer</h3>
-                </div>
-                <p>Suspicious e-mail triage: extracts IoCs (IP, From, Return-Path, Reply-To), reads SPF/DKIM/DMARC from the trusted header and produces an explainable risk score, flagging BEC tactics.</p>
-                <div class="tags">
-                    <span>PHP</span> <span>Phishing</span> <span>SPF/DKIM/DMARC</span> <span>BEC</span>
-                </div>
-                <div class="card-links">
-                    <a href="https://github.com/MattheusAlfonso/email-header-analyzer" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="project-card">
-                <div class="project-img-box">
-                    <img src="https://raw.githubusercontent.com/MattheusAlfonso/pythreatintel/main/img/samples-phishing.png" alt="PyThreatIntel analysis" class="project-img">
-                </div>
-                <div class="card-header">
-                    <i class="fas fa-shield-virus project-icon"></i>
-                    <h3>04. PyThreatIntel</h3>
-                </div>
-                <p>Command-line tool for phishing triage of .eml files: validates SPF/DKIM/DMARC, traces the origin IP through the Received chain, detects sender spoofing, extracts IoCs (URLs and attachment SHA256 hashes) and checks IP reputation on VirusTotal. JSON output for SIEM pipelines.</p>
-                <div class="tags">
-                    <span>Python</span> <span>Threat Intel</span> <span>VirusTotal API</span> <span>IoCs</span>
-                </div>
-                <div class="card-links">
-                    <a href="https://github.com/MattheusAlfonso/pythreatintel" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contact" class="section">
-        <div class="contact-box">
-            <h2>Let's talk</h2>
-            <p>Open to remote and relocation opportunities in Cybersecurity / Application Security across Latin America.</p>
-            <p class="email-clean">Direct e-mail: <span>ederson.alfonso@icloud.com</span></p>
-            <div class="contact-buttons">
-                <a href="https://wa.me/5562920038598?text=Hi%20Matheus,%20I%20saw%20your%20Cybersecurity%20portfolio%20and%20would%20like%20to%20talk!" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                <a href="https://www.linkedin.com/in/mattheusalfonso" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fab fa-linkedin"></i> Message on LinkedIn</a>
-                <a href="cv-en.pdf" download="CV-Matheus-Alfonso-EN.pdf" class="btn btn-secondary"><i class="fas fa-file-arrow-down"></i> Download Resume (PDF)</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Matheus Alfonso. Cybersecurity Portfolio.</p>
+    <footer class="footer">
+        <div class="container">&copy; 2026 Matheus Alfonso · Cybersecurity Portfolio</div>
     </footer>
-
 </body>
 </html>
