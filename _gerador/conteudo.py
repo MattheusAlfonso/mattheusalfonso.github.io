@@ -19,8 +19,8 @@ UI = {
         "title": "Matheus Alfonso | Cybersecurity & Application Security Analyst",
         "description": "Portfólio de Matheus Alfonso: Application Security, prevenção de phishing e desenvolvimento web defensivo.",
         "nav": ["Sobre", "Projetos", "Contato"],
-        "lead": "Analista de Segurança da Informação focado na camada preventiva, higiene digital e desenvolvimento web defensivo. "
-                "Atuo com PHP, Python, Java, SQL e diretrizes OWASP Top 10, conectando tecnologia, prevenção de ameaças e desenvolvimento seguro.",
+        "lead": "Analista de Cibersegurança Jr. com foco em SOC N1, triagem de phishing e segurança de aplicações. "
+                "Atuo com Python, SQL, Linux, SIEM (Wazuh) e OWASP Top 10, unindo detecção de ameaças, prevenção e desenvolvimento seguro.",
         "btn_projects": "Ver projetos",
         "btn_cv": "Currículo",
         "cv_name": "CV-Matheus-Alfonso-PT.pdf",
@@ -30,23 +30,23 @@ UI = {
         "about": [
             "Profissional de Segurança da Informação com experiência prática corporativa na Assembleia Legislativa de Goiás (ALEGO), "
             "atuando na camada preventiva, higiene digital, OPSEC, triagem de e-mails suspeitos e mitigação de ameaças de Engenharia Social (Phishing).",
-            "Busco constante evolução técnica unindo fundamentos de redes, análise de dados e desenvolvimento defensivo. Utilizo **SQL** para modelagem "
-            "e consulta estruturada de dados, **Python** para automação, análise de dados e rotinas de cibersegurança, e **Java** para lógica orientada "
-            "a objetos e regras de negócio robustas, integrando conhecimento de segurança web e controle de dados.",
+            "Busco constante evolução técnica unindo redes, detecção e desenvolvimento defensivo. Uso **Python** para automação e análise de ameaças, "
+            "**SQL** para consulta e modelagem de dados, e estudo análise de tráfego e de logs num laboratório de **SIEM (Wazuh)**. Em equipe, "
+            "cuido da segurança de uma plataforma web: modelo de ameaças STRIDE, revisão de código e pipeline de segurança no GitHub Actions.",
             "Também uso IA no dia a dia de desenvolvimento, operando o **Claude Code** para revisão de segurança do código, testes e documentação, "
             "sempre entendendo e validando cada mudança.",
         ],
         "facts": [("Localização", "Goiânia, GO (Remoto / Relocação)"),
-                  ("Foco atual", "AppSec / Prevenção de Phishing / OPSEC"),
+                  ("Foco atual", "SOC N1 / Triagem de Phishing / AppSec"),
                   ("Idiomas", "PT (Nativo), EN (Avançado), ES (Intermediário)")],
         "edu_eyebrow": "Educação",
         "edu_title": "Formação acadêmica",
         "edu_degree": "Tecnólogo em Cibersegurança",
         "edu_detail": "Universidade Anhembi Morumbi · 2026–2028 (previsão)",
         "skills_title": "Competências técnicas",
-        "skills": ["Python & Automação", "SQL & Banco de Dados", "Java & Programação", "PHP & Desenvol. Defensivo",
-                   "OWASP Top 10 & AppSec", "Análise de Phishing & Headers", "Linux, Bash & Shell Script",
-                   "Git, GitHub & Versionamento", "IA Aplicada & Claude Code"],
+        "skills": ["SOC N1 & Triagem de Alertas", "SIEM & Análise de Logs (Wazuh)", "Análise de Phishing & Headers",
+                   "Redes & Análise de Tráfego", "OWASP Top 10 & AppSec", "DevSecOps & CI de Segurança",
+                   "Python & Automação", "SQL & PostgreSQL", "Linux, Bash & Git"],
         "proj_eyebrow": "Portfólio",
         "proj_title": "Projetos em destaque",
         "proj_desc": "Ferramentas e aplicações de segurança construídas do zero, cada uma com modelo de ameaças, testes de defesa e documentação em três idiomas. "
@@ -76,8 +76,8 @@ UI = {
         "title": "Matheus Alfonso | Cybersecurity & Application Security Analyst",
         "description": "Portafolio de Matheus Alfonso: Application Security, prevención de phishing y desarrollo web defensivo.",
         "nav": ["Sobre mí", "Proyectos", "Contacto"],
-        "lead": "Analista de Seguridad de la Información enfocado en la capa preventiva, higiene digital y desarrollo web defensivo. "
-                "Trabajo con PHP, Python, Java, SQL y las directrices OWASP Top 10, conectando tecnología, prevención de amenazas y desarrollo seguro.",
+        "lead": "Analista de Ciberseguridad Jr. enfocado en SOC N1, triaje de phishing y seguridad de aplicaciones. "
+                "Trabajo con Python, SQL, Linux, SIEM (Wazuh) y OWASP Top 10, uniendo detección de amenazas, prevención y desarrollo seguro.",
         "btn_projects": "Ver proyectos",
         "btn_cv": "Currículum",
         "cv_name": "CV-Matheus-Alfonso-ES.pdf",
@@ -87,23 +87,23 @@ UI = {
         "about": [
             "Profesional de Seguridad de la Información con experiencia práctica en la Asamblea Legislativa de Goiás (ALEGO, Brasil), "
             "en la capa preventiva, higiene digital, OPSEC, triaje de correos sospechosos y mitigación de amenazas de Ingeniería Social (Phishing).",
-            "Busco una evolución técnica constante uniendo fundamentos de redes, análisis de datos y desarrollo defensivo. Uso **SQL** para modelado "
-            "y consulta estructurada de datos, **Python** para automatización, análisis de datos y rutinas de ciberseguridad, y **Java** para lógica "
-            "orientada a objetos y reglas de negocio robustas, integrando conocimientos de seguridad web y control de datos.",
+            "Busco una evolución técnica constante uniendo redes, detección y desarrollo defensivo. Uso **Python** para automatización y análisis de "
+            "amenazas, **SQL** para consulta y modelado de datos, y estudio análisis de tráfico y de logs en un laboratorio de **SIEM (Wazuh)**. En "
+            "equipo, me encargo de la seguridad de una plataforma web: modelo de amenazas STRIDE, revisión de código y pipeline de seguridad en GitHub Actions.",
             "También uso IA en mi día a día de desarrollo, operando **Claude Code** para revisión de seguridad del código, pruebas y documentación, "
             "siempre entendiendo y validando cada cambio.",
         ],
         "facts": [("Ubicación", "Goiânia, Brasil (Remoto / Disponible para reubicación)"),
-                  ("Enfoque actual", "AppSec / Prevención de Phishing / OPSEC"),
+                  ("Enfoque actual", "SOC N1 / Triaje de Phishing / AppSec"),
                   ("Idiomas", "PT (Nativo), EN (Avanzado), ES (Intermedio)")],
         "edu_eyebrow": "Educación",
         "edu_title": "Formación académica",
         "edu_degree": "Tecnólogo en Ciberseguridad",
         "edu_detail": "Universidad Anhembi Morumbi · 2026–2028 (previsto)",
         "skills_title": "Competencias técnicas",
-        "skills": ["Python & Automatización", "SQL & Bases de Datos", "Java & Programación", "PHP & Desarrollo Defensivo",
-                   "OWASP Top 10 & AppSec", "Análisis de Phishing & Headers", "Linux, Bash & Shell Script",
-                   "Git, GitHub & Control de Versiones", "IA Aplicada & Claude Code"],
+        "skills": ["SOC N1 & Triaje de Alertas", "SIEM & Análisis de Logs (Wazuh)", "Análisis de Phishing & Headers",
+                   "Redes & Análisis de Tráfico", "OWASP Top 10 & AppSec", "DevSecOps & CI de Seguridad",
+                   "Python & Automatización", "SQL & PostgreSQL", "Linux, Bash & Git"],
         "proj_eyebrow": "Portafolio",
         "proj_title": "Proyectos destacados",
         "proj_desc": "Herramientas y aplicaciones de seguridad construidas desde cero, cada una con modelo de amenazas, pruebas de defensa y documentación en tres idiomas. "
@@ -132,8 +132,8 @@ UI = {
         "title": "Matheus Alfonso | Cybersecurity & Application Security Analyst",
         "description": "Portfolio of Matheus Alfonso: Application Security, phishing prevention and defensive web development.",
         "nav": ["About", "Projects", "Contact"],
-        "lead": "Information Security Analyst focused on the preventive layer, digital hygiene and defensive web development. "
-                "I work with PHP, Python, Java, SQL and OWASP Top 10 guidelines, connecting technology, threat prevention and secure development.",
+        "lead": "Junior Cybersecurity Analyst focused on SOC Tier 1, phishing triage and application security. "
+                "I work with Python, SQL, Linux, SIEM (Wazuh) and OWASP Top 10, bringing together threat detection, prevention and secure development.",
         "btn_projects": "View projects",
         "btn_cv": "Resume",
         "cv_name": "CV-Matheus-Alfonso-EN.pdf",
@@ -143,23 +143,23 @@ UI = {
         "about": [
             "Information Security professional with hands-on experience at the Legislative Assembly of Goiás (ALEGO, Brazil), working on the "
             "preventive layer, digital hygiene, OPSEC, suspicious e-mail triage and mitigation of Social Engineering (Phishing) threats.",
-            "I keep growing technically by combining networking fundamentals, data analysis and defensive development. I use **SQL** for data "
-            "modeling and structured queries, **Python** for automation, data analysis and security routines, and **Java** for object-oriented "
-            "logic and robust business rules, bringing web security and data control together.",
+            "I keep growing technically by combining networking, detection and defensive development. I use **Python** for automation and threat "
+            "analysis, **SQL** for data queries and modeling, and I study traffic and log analysis in a **SIEM (Wazuh)** lab. On a team project, "
+            "I own the security of a web platform: STRIDE threat model, code review and a security pipeline in GitHub Actions.",
             "I also use AI in my daily development work, operating **Claude Code** for security code review, testing and documentation, "
             "always understanding and validating every change.",
         ],
         "facts": [("Location", "Goiânia, Brazil (Remote / Open to relocation)"),
-                  ("Current focus", "AppSec / Phishing Prevention / OPSEC"),
+                  ("Current focus", "SOC Tier 1 / Phishing Triage / AppSec"),
                   ("Languages", "PT (Native), EN (Advanced), ES (Intermediate)")],
         "edu_eyebrow": "Education",
         "edu_title": "Academic background",
         "edu_degree": "Technologist Degree in Cybersecurity",
         "edu_detail": "Anhembi Morumbi University · 2026–2028 (expected)",
         "skills_title": "Technical skills",
-        "skills": ["Python & Automation", "SQL & Databases", "Java & Programming", "PHP & Defensive Development",
-                   "OWASP Top 10 & AppSec", "Phishing & Header Analysis", "Linux, Bash & Shell Script",
-                   "Git, GitHub & Version Control", "Applied AI & Claude Code"],
+        "skills": ["SOC Tier 1 & Alert Triage", "SIEM & Log Analysis (Wazuh)", "Phishing & Header Analysis",
+                   "Networking & Traffic Analysis", "OWASP Top 10 & AppSec", "DevSecOps & Security CI",
+                   "Python & Automation", "SQL & PostgreSQL", "Linux, Bash & Git"],
         "proj_eyebrow": "Portfolio",
         "proj_title": "Featured projects",
         "proj_desc": "Security tools and applications built from scratch, each with a threat model, defense tests and documentation in three languages. "
