@@ -1,0 +1,11 @@
+{
+  "id": "glass-fold",
+  "name": "Glass fold",
+  "family": "material",
+  "look": "Panes of glass folded over each other, each with one lit crease, drifting slowly: the 0x Labs site background.",
+  "bestOn": ["hero", "card"],
+  "motion": "slow",
+  "cost": "low",
+  "palettes": ["dark", "colour"],
+  "quiet": true
+}
