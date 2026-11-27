@@ -2,7 +2,7 @@
 <!-- type: software (portfólio de um analista de cibersegurança; as ferramentas dele são o produto)
      deal: hero product (o relatório do Email Header Analyzer no palco), nav-cards, close-word, footer-dark, rhythm space,
      buttons solid, mark dots, palette graphite-safety-orange, type funnel, radius sharp, ground sand,
-     effect gradient-mesh (palco do hero); moments: pinned-chapters (#metodo), liquid-type (#prova) -->
+     effect glass-fold (palco do hero, o fundo do site da 0x Labs); moments: pinned-chapters (#metodo), liquid-type (#prova) -->
 <html lang="es" data-type="software" data-radius="sharp" data-ground="sand" data-buttons="solid" data-motion>
 <head>
 <meta charset="utf-8">
@@ -39,6 +39,7 @@
 <link rel="stylesheet" href="assets/ui/base.css">
 <link rel="stylesheet" href="assets/ui/window/fragment.css">
 <link rel="stylesheet" href="assets/ui/terminal-run/fragment.css">
+<link rel="stylesheet" href="assets/diagrams/diagram.css">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/head.js"></script>
 <script src="assets/backgrounds/backgrounds.js"></script>
@@ -106,12 +107,12 @@
         <div class="btn-row"><a class="btn btn--primary" href="cv-es.pdf" download="CV-Matheus-Alfonso-ES.pdf">Descargar currículum<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--secondary" href="#projetos">Ver los proyectos</a></div>
       </div>
       <div class="hero__stage hero__stage--ui" data-enter-media>
-        <div class="hero__fx" data-fx="gradient-mesh" data-fx-seed="41" aria-hidden="true"></div>
+        <div class="hero__fx" data-fx="glass-fold" data-fx-seed="41" aria-hidden="true"></div>
         <div class="stage stage--fade-b">
-          <div class="ui rep" role="img" aria-label="Informe del Email Header Analyzer: un correo de phishing con SPF, DKIM y DMARC fallidos y puntaje de riesgo 95 de 100.">
+          <div class="ui rep" data-rep role="img" aria-label="Informe del Email Header Analyzer: un correo de phishing con SPF, DKIM y DMARC fallidos y puntaje de riesgo 95 de 100.">
             <div class="rep__bar"><span class="ui-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="rep__crumb">Email Header Analyzer <i>/</i> <b>Informe de triaje</b></span><span class="ui-spacer"></span><span class="rep__chip">php -S localhost:8000</span></div>
             <div class="rep__body">
-              <div class="rep__raw">
+              <div class="rep__raw"><span class="rep__scan" aria-hidden="true"></span>
                 <p class="rep__label">Cabecera en bruto</p>
 <pre class="rep__pre"><span class="rep__hk">Received:</span> from mail.atacante-phishing-xyz.com
   (203.0.113.195) by mx.empresa.com.br
@@ -124,7 +125,7 @@
   dmarc=<b>fail</b></pre>
               </div>
               <div class="rep__out">
-                <div class="rep__score"><span class="rep__num">95</span><span class="rep__of">/100</span><span class="rep__risk">Riesgo alto</span></div>
+                <div class="rep__score"><span class="rep__num" data-rep-num>95</span><span class="rep__of">/100</span><span class="rep__risk">Riesgo alto</span></div>
                 <ul class="rep__rows">
               <li><span class="rep__k">DMARC</span><span class="rep__v">fail</span><span class="rep__p">+30</span></li>
               <li><span class="rep__k">SPF</span><span class="rep__v">fail</span><span class="rep__p">+25</span></li>
@@ -185,14 +186,13 @@
       <div class="ui-term__screen" data-term-screen>
         <div class="ui-term__track" data-term-track>
           <div class="ui-term__ln ui-term__cmd"><span class="ui-term__cwd">~/<span class="ui-term__up">soc/</span>pti</span><span class="ui-term__sig">$</span><span class="ui-term__typed" data-term-cmd>analyzer.py phish.eml</span></div>
-          <div class="ui-term__ln ui-term__meter" data-term-out data-term-meter><span class="ui-term__bar"><i></i></span><span class="ui-term__count" data-term-count>7 of 7 checks</span></div>
+          <div class="ui-term__ln ui-term__meter" data-term-out data-term-meter><span class="ui-term__bar"><i></i></span><span class="ui-term__count" data-term-count>6 of 6 checks</span></div>
           <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">SPF</span><span class="ui-term__n">FAIL</span><span class="ui-term__t"></span></div>
           <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">DKIM</span><span class="ui-term__n">NONE</span><span class="ui-term__t"></span></div>
           <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">DMARC</span><span class="ui-term__n">FAIL</span><span class="ui-term__t"></span></div>
           <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">Reply-To</span><span class="ui-term__n">otro dominio</span><span class="ui-term__t"></span></div>
           <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">IP de origen</span><span class="ui-term__n">45.33.32.156</span><span class="ui-term__t"></span></div>
-          <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">URLs</span><span class="ui-term__n">1 extraída</span><span class="ui-term__t"></span></div>
-          <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">Adjuntos</span><span class="ui-term__n">invoice.pdf.exe</span><span class="ui-term__t"></span></div>
+          <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">Adjunto</span><span class="ui-term__n">invoice.pdf.exe</span><span class="ui-term__t"></span></div>
           <div class="ui-term__ln ui-term__gap" data-term-out aria-hidden="true"></div>
           <div class="ui-term__ln ui-term__sum" data-term-out><span class="ui-term__key">Riesgo</span><span class="ui-term__val">HIGH</span><span class="ui-term__dim">(95/100)</span></div>
           <div class="ui-term__ln ui-term__sum" data-term-out><span class="ui-term__key">IoCs</span><span class="ui-term__val">1 URL · 1 adjunto</span><span class="ui-term__dim"></span></div>
@@ -218,12 +218,12 @@
             <p class="t-label muted">PyThreatIntel · Threat intel · Python</p>
             <h3>Clasifica correos .eml por riesgo</h3>
             <p>Valida SPF, DKIM y DMARC, rastrea la IP de origen y consulta VirusTotal. Salida en JSON para SIEM.</p>
-            <div class="panel panel--json"><pre class="json" aria-hidden="true">{
-  <b>"subject"</b>: "Urgent: Verify your account",
-  <b>"spf"</b>: "FAIL", <b>"dkim"</b>: "NONE", <b>"dmarc"</b>: "FAIL",
-  <b>"risk"</b>: <em>"HIGH"</em>, <b>"score"</b>: <em>95</em>,
-  <b>"iocs"</b>: { <b>"urls"</b>: 1, <b>"attachments"</b>: ["invoice.pdf.exe"] }
-}</pre></div>
+            <div class="panel panel--json"><pre class="json" aria-hidden="true" data-m-loop><span class="jl">{</span>
+<span class="jl">  <b>"subject"</b>: "Urgent: Verify your account",</span>
+<span class="jl">  <b>"spf"</b>: "FAIL", <b>"dkim"</b>: "NONE", <b>"dmarc"</b>: "FAIL",</span>
+<span class="jl">  <b>"risk"</b>: <em>"HIGH"</em>, <b>"score"</b>: <em>95</em>,</span>
+<span class="jl">  <b>"iocs"</b>: { <b>"urls"</b>: 1, <b>"attachment"</b>: "invoice.pdf.exe" }</span>
+<span class="jl">}</span></pre></div>
             <a class="card__link" href="projetos/pythreatintel-es.html">Ver el proyecto<span class="sr-only">: PyThreatIntel</span><svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
           </article>
           <article class="card card--row span-6 proj">
@@ -314,8 +314,9 @@
         <h2 class="span-5" id="ferramentas-h">Herramientas del día a día. <span class="muted">Del script de triaje al pipeline de CI.</span></h2>
         <p class="span-6 start-7 lead-p">Python para automatización y análisis de amenazas, PHP en las aplicaciones de demostración, SQL para consultar datos y Claude Code para revisión de seguridad, validando cada cambio.</p>
       </div>
-      <div class="tools" role="img" aria-label="Python, PHP, PostgreSQL, Linux, Bash, Git, GitHub Actions, VirusTotal, Claude Code, GitHub">
-        <ul class="tools__grid">
+      <div class="grid grid--top fer__row">
+        <div class="tools span-5" role="img" aria-label="Python, PHP, PostgreSQL, Linux, Bash, Git, GitHub Actions, VirusTotal, Claude Code, GitHub">
+          <ul class="tools__grid">
           <li class="tool"><span class="ic-tile"><img class="ic ic-40" src="assets/icons/python.svg" alt="" width="40" height="40"></span><span class="t-label" aria-hidden="true">Python</span></li>
           <li class="tool"><span class="ic-tile"><img class="ic ic-40 ic-wide" src="assets/icons/php.svg" alt="" width="40" height="40"></span><span class="t-label" aria-hidden="true">PHP</span></li>
           <li class="tool"><span class="ic-tile"><img class="ic ic-40" src="assets/icons/postgres.svg" alt="" width="40" height="40"></span><span class="t-label" aria-hidden="true">PostgreSQL</span></li>
@@ -326,7 +327,11 @@
           <li class="tool"><span class="ic-tile"><img class="ic ic-40" src="assets/icons/virustotal.svg" alt="" width="40" height="40"></span><span class="t-label" aria-hidden="true">VirusTotal</span></li>
           <li class="tool"><span class="ic-tile"><img class="ic ic-40 ic-land" src="assets/icons/claude-code.svg" alt="" width="40" height="40"></span><span class="t-label" aria-hidden="true">Claude Code</span></li>
           <li class="tool"><span class="ic-tile"><img class="ic ic-40 ic-ink" src="assets/icons/github.svg" alt="" width="40" height="40"></span><span class="t-label" aria-hidden="true">GitHub</span></li>
-        </ul>
+          </ul>
+        </div>
+        <div class="card fer__dg span-6 start-7">
+          <div class="panel"><div class="dg" data-diagram='{"layout":"bowtie","alt":"Un correo .eml, sus cabeceras y la cadena Received entran en PyThreatIntel, que consulta VirusTotal y entrega un informe JSON para el SIEM y el CI.","sources":[{"label":"Correo","icon":"ui:mail","sub":".eml"},{"label":"Cabeceras","icon":"ui:file-text","sub":"Authentication-Results"},{"label":"Received","icon":"ui:network","sub":"IP de origen"}],"core":{"label":"PyThreatIntel","icon":"python"},"targets":[{"label":"VirusTotal","icon":"virustotal","sub":"Reputación de la IP"},{"label":"Informe","icon":"ui:braces","sub":"JSON"},{"label":"SIEM","icon":"ui:shield-check","sub":"Wazuh"},{"label":"GitHub Actions","icon":"github-actions","sub":"CI"}]}'></div></div>
+        </div>
       </div>
     </div>
   </section>
@@ -370,5 +375,7 @@
 <script type="module" src="assets/system.js"></script>
 <script type="module" src="assets/motion/motion.js"></script>
 <script type="module" src="assets/layout/layout.js"></script>
+<script type="module" src="assets/diagrams/mount.js"></script>
+<script type="module" src="assets/site.js"></script>
 </body>
 </html>

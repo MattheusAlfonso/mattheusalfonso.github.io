@@ -43,12 +43,12 @@ const projectFile = (slug, lang) => (lang === 'pt' ? `projetos/${slug}.html` : `
 function head({ lang, title, description, url, image, prefix, alternates, page }) {
   const alt = Object.entries(alternates).map(([l, href]) => `<link rel="alternate" hreflang="${HTML_LANG[l]}" href="${SITE}${href}">`).join('\n');
   const css = ['system.css', 'ui/cards.css', 'motion/motion.css', 'backgrounds/backgrounds.css', 'layout/layout.css', 'icons/icon.css',
-    'ui/base.css', 'ui/window/fragment.css', 'ui/terminal-run/fragment.css', 'site.css'];
+    'ui/base.css', 'ui/window/fragment.css', 'ui/terminal-run/fragment.css', 'diagrams/diagram.css', 'site.css'];
   return `<!doctype html>
 <!-- type: software (portfólio de um analista de cibersegurança; as ferramentas dele são o produto)
      deal: hero product (o relatório do Email Header Analyzer no palco), nav-cards, close-word, footer-dark, rhythm space,
      buttons solid, mark dots, palette graphite-safety-orange, type funnel, radius sharp, ground sand,
-     effect gradient-mesh (palco do hero); moments: pinned-chapters (#metodo), liquid-type (#prova) -->
+     effect glass-fold (palco do hero, o fundo do site da 0x Labs); moments: pinned-chapters (#metodo), liquid-type (#prova) -->
 <html lang="${HTML_LANG[lang]}" data-type="software" data-radius="sharp" data-ground="sand" data-buttons="solid" data-motion${page ? ` data-page="${page}"` : ''}>
 <head>
 <meta charset="utf-8">
@@ -175,6 +175,8 @@ function footer(lang, { prefix, home, langTargets }) {
 <script type="module" src="${prefix}assets/system.js"></script>
 <script type="module" src="${prefix}assets/motion/motion.js"></script>
 <script type="module" src="${prefix}assets/layout/layout.js"></script>
+<script type="module" src="${prefix}assets/diagrams/mount.js"></script>
+<script type="module" src="${prefix}assets/site.js"></script>
 </body>
 </html>
 `;
@@ -185,10 +187,10 @@ function footer(lang, { prefix, home, langTargets }) {
 function heroReport(t) {
   const rows = t.rep_rows.map(([k, v, pts]) => `
               <li><span class="rep__k">${esc(k)}</span><span class="rep__v">${esc(v)}</span><span class="rep__p">${esc(pts)}</span></li>`).join('');
-  return `<div class="ui rep" role="img" aria-label="${esc(t.rep_aria)}">
+  return `<div class="ui rep" data-rep role="img" aria-label="${esc(t.rep_aria)}">
             <div class="rep__bar">${DOTS}<span class="rep__crumb">Email Header Analyzer <i>/</i> <b>${esc(t.rep_title)}</b></span><span class="ui-spacer"></span><span class="rep__chip">php -S localhost:8000</span></div>
             <div class="rep__body">
-              <div class="rep__raw">
+              <div class="rep__raw"><span class="rep__scan" aria-hidden="true"></span>
                 <p class="rep__label">${esc(t.rep_input)}</p>
 <pre class="rep__pre"><span class="rep__hk">Received:</span> from mail.atacante-phishing-xyz.com
   (203.0.113.195) by mx.empresa.com.br
@@ -201,7 +203,7 @@ function heroReport(t) {
   dmarc=<b>fail</b></pre>
               </div>
               <div class="rep__out">
-                <div class="rep__score"><span class="rep__num">95</span><span class="rep__of">/100</span><span class="rep__risk">${esc(t.rep_risk)}</span></div>
+                <div class="rep__score"><span class="rep__num" data-rep-num>95</span><span class="rep__of">/100</span><span class="rep__risk">${esc(t.rep_risk)}</span></div>
                 <ul class="rep__rows">${rows}
                 </ul>
                 <dl class="rep__ioc">
@@ -250,7 +252,7 @@ function appFrame(t) {
       <div class="ui-term__screen" data-term-screen>
         <div class="ui-term__track" data-term-track>
           <div class="ui-term__ln ui-term__cmd">${prompt}<span class="ui-term__typed" data-term-cmd>analyzer.py phish.eml</span></div>
-          <div class="ui-term__ln ui-term__meter" data-term-out data-term-meter><span class="ui-term__bar"><i></i></span><span class="ui-term__count" data-term-count>7 of 7 checks</span></div>${steps}
+          <div class="ui-term__ln ui-term__meter" data-term-out data-term-meter><span class="ui-term__bar"><i></i></span><span class="ui-term__count" data-term-count>6 of 6 checks</span></div>${steps}
           <div class="ui-term__ln ui-term__gap" data-term-out aria-hidden="true"></div>${sum}
           <div class="ui-term__ln ui-term__done" data-term-out data-term-done><span class="ui-term__ok"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4.5 8.3 2.4 2.4 4.6-5"/></svg></span><b>${esc(t.term_done)}</b><span class="ui-term__dim">${esc(t.term_done_b)}</span></div>
           <div class="ui-term__ln ui-term__cmd" data-term-next>${prompt}<span class="ui-term__typed"></span><i class="ui-term__caret" aria-hidden="true"></i></div>
@@ -262,12 +264,15 @@ function appFrame(t) {
 }
 
 function jsonPanel() {
-  return `<pre class="json" aria-hidden="true">{
-  <b>"subject"</b>: "Urgent: Verify your account",
-  <b>"spf"</b>: "FAIL", <b>"dkim"</b>: "NONE", <b>"dmarc"</b>: "FAIL",
-  <b>"risk"</b>: <em>"HIGH"</em>, <b>"score"</b>: <em>95</em>,
-  <b>"iocs"</b>: { <b>"urls"</b>: 1, <b>"attachments"</b>: ["invoice.pdf.exe"] }
-}</pre>`;
+  const lines = [
+    '{',
+    '  <b>"subject"</b>: "Urgent: Verify your account",',
+    '  <b>"spf"</b>: "FAIL", <b>"dkim"</b>: "NONE", <b>"dmarc"</b>: "FAIL",',
+    '  <b>"risk"</b>: <em>"HIGH"</em>, <b>"score"</b>: <em>95</em>,',
+    '  <b>"iocs"</b>: { <b>"urls"</b>: 1, <b>"attachment"</b>: "invoice.pdf.exe" }',
+    '}',
+  ];
+  return `<pre class="json" aria-hidden="true" data-m-loop>${lines.map(l => `<span class="jl">${l}</span>`).join('\n')}</pre>`;
 }
 
 function home(lang) {
@@ -312,7 +317,7 @@ function home(lang) {
         <div class="btn-row"><a class="btn btn--primary" href="cv-${lang}.pdf" download="${t.cv_name}">${esc(t.cv)}${ARROW}</a><a class="btn btn--secondary" href="#projetos">${esc(t.see_projects)}</a></div>
       </div>
       <div class="hero__stage hero__stage--ui" data-enter-media>
-        <div class="hero__fx" data-fx="gradient-mesh" data-fx-seed="41" aria-hidden="true"></div>
+        <div class="hero__fx" data-fx="glass-fold" data-fx-seed="41" aria-hidden="true"></div>
         <div class="stage stage--fade-b">
           ${heroReport(t)}
         </div>
@@ -387,9 +392,14 @@ function home(lang) {
         <h2 class="span-5" id="ferramentas-h">${esc(t.fer_h2)} <span class="muted">${esc(t.fer_h2b)}</span></h2>
         <p class="span-6 start-7 lead-p">${esc(t.fer_p)}</p>
       </div>
-      <div class="tools" role="img" aria-label="${esc(t.tools.map(x => x[1]).join(', '))}">
-        <ul class="tools__grid">${tools}
-        </ul>
+      <div class="grid grid--top fer__row">
+        <div class="tools span-5" role="img" aria-label="${esc(t.tools.map(x => x[1]).join(', '))}">
+          <ul class="tools__grid">${tools}
+          </ul>
+        </div>
+        <div class="card fer__dg span-6 start-7">
+          <div class="panel"><div class="dg" data-diagram='${JSON.stringify(t.dg)}'></div></div>
+        </div>
       </div>
     </div>
   </section>
