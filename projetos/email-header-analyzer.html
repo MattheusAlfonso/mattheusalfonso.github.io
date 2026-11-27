@@ -1,87 +1,183 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!doctype html>
+<!-- type: software (portfólio de um analista de cibersegurança; as ferramentas dele são o produto)
+     deal: hero product (o relatório do Email Header Analyzer no palco), nav-cards, close-word, footer-dark, rhythm space,
+     buttons solid, mark dots, palette graphite-safety-orange, type funnel, radius sharp, ground sand,
+     effect gradient-mesh (palco do hero); moments: pinned-chapters (#metodo), liquid-type (#prova) -->
+<html lang="pt-BR" data-type="software" data-radius="sharp" data-ground="sand" data-buttons="solid" data-motion data-page="project">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' https://raw.githubusercontent.com; style-src 'self' https://cdnjs.cloudflare.com; font-src https://cdnjs.cloudflare.com; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0b1120">
-    <title>Email Header &amp; Phishing Analyzer | Matheus Alfonso</title>
-    <meta name="description" content="O que os cabeçalhos de um e-mail revelam sobre quem realmente o enviou? Ferramenta web de triagem: você cola os cabeçalhos brutos de um e-mail suspeito e recebe os indicadores do remetente, os resultados de SPF/DKIM/DMARC, a checagem de alinhamento de domínios e um score de risco de 0 a 100 com a explicação de cada ponto.">
-    <link rel="alternate" hreflang="pt-BR" href="https://mattheusalfonso.github.io/projetos/email-header-analyzer.html">
-    <link rel="alternate" hreflang="es" href="https://mattheusalfonso.github.io/projetos/email-header-analyzer-es.html">
-    <link rel="alternate" hreflang="en" href="https://mattheusalfonso.github.io/projetos/email-header-analyzer-en.html">
-    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mattheusalfonso.github.io/projetos/email-header-analyzer.html">
-    <meta property="og:title" content="Email Header &amp; Phishing Analyzer | Matheus Alfonso">
-    <meta property="og:description" content="O que os cabeçalhos de um e-mail revelam sobre quem realmente o enviou? Ferramenta web de triagem: você cola os cabeçalhos brutos de um e-mail suspeito e recebe os indicadores do remetente, os resultados de SPF/DKIM/DMARC, a checagem de alinhamento de domínios e um score de risco de 0 a 100 com a explicação de cada ponto.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/MattheusAlfonso/email-header-analyzer/main/preview.png">
-    <meta property="og:locale" content="pt_BR">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Email Header &amp; Phishing Analyzer: O que os cabeçalhos de um e-mail revelam sobre quem realmente o enviou?</title>
+<meta name="description" content="Ferramenta web de triagem: você cola os cabeçalhos brutos de um e-mail suspeito e recebe os indicadores do remetente, os resultados de SPF/DKIM/DMARC, a checagem de alinhamento de domínios e um score de risco de 0 a 100 com a explicação de cada ponto.">
+<link rel="canonical" href="https://mattheusalfonso.github.io/projetos/email-header-analyzer.html">
+<link rel="alternate" hreflang="pt-BR" href="https://mattheusalfonso.github.io/projetos/email-header-analyzer.html">
+<link rel="alternate" hreflang="es" href="https://mattheusalfonso.github.io/projetos/email-header-analyzer-es.html">
+<link rel="alternate" hreflang="en" href="https://mattheusalfonso.github.io/projetos/email-header-analyzer-en.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mattheusalfonso.github.io/projetos/email-header-analyzer.html">
+<meta property="og:title" content="Email Header &amp; Phishing Analyzer: O que os cabeçalhos de um e-mail revelam sobre quem realmente o enviou?">
+<meta property="og:description" content="Ferramenta web de triagem: você cola os cabeçalhos brutos de um e-mail suspeito e recebe os indicadores do remetente, os resultados de SPF/DKIM/DMARC, a checagem de alinhamento de domínios e um score de risco de 0 a 100 com a explicação de cada ponto.">
+<meta property="og:image" content="https://mattheusalfonso.github.io/img/projetos/email-header-analyzer.png">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="theme-color" content="#18191b">
+<meta name="site-kind" content="software">
+<meta name="page-type" content="software">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400..700&family=Funnel+Sans:wght@400..600&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/system.css">
+<link rel="stylesheet" href="../assets/ui/cards.css">
+<link rel="stylesheet" href="../assets/motion/motion.css">
+<link rel="stylesheet" href="../assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="../assets/layout/layout.css">
+<link rel="stylesheet" href="../assets/icons/icon.css">
+<link rel="stylesheet" href="../assets/ui/base.css">
+<link rel="stylesheet" href="../assets/ui/window/fragment.css">
+<link rel="stylesheet" href="../assets/ui/terminal-run/fragment.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/head.js"></script>
+<script src="../assets/backgrounds/backgrounds.js"></script>
+<link rel="modulepreload" href="../assets/moments/moments.js">
+<link rel="modulepreload" href="../assets/moments/lib.js">
+
 </head>
 <body>
-    <header class="navwrap">
-        <nav class="container nav">
-            <a class="brand" href="../index.html">Matheus<span>.Alfonso</span></a>
-            <div class="navlinks"><a href="../index.html#about">Sobre</a><a href="../index.html#projects">Projetos</a><a href="../index.html#contact">Contato</a></div>
-            <div class="lang-switch"><i class="fas fa-globe" aria-hidden="true"></i><a href="email-header-analyzer.html" class="active" aria-current="true">PT</a><a href="email-header-analyzer-es.html" lang="es">ES</a><a href="email-header-analyzer-en.html" lang="en">EN</a></div>
-        </nav>
-    </header>
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Pular para o conteúdo</a>
+    <a class="nav__logo" href="../index.html#top"><span class="mark" data-mark="dots" aria-hidden="true"></span>Matheus Alfonso</a>
+    <nav class="nav__links" aria-label="Principal">
+      <div class="nav__item"><a class="nav__link" href="../index.html#triagem">Triagem</a></div>
+      <div class="nav__item">
+        <a class="nav__link" href="../index.html#projetos">Projetos <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav__menu">
+          <div class="wrap grid">
+            <a class="menu-card span-3" href="../projetos/pythreatintel.html">
+              <div class="panel"><img class="frame__img" src="../img/projetos/pythreatintel-phishing.png" alt="" width="991" height="438" loading="lazy"></div>
+              <span class="t-card">PyThreatIntel</span>
+              <span class="t-small muted">Classifica e-mails .eml por risco</span>
+            </a>
+            <a class="menu-card span-3" href="../projetos/secure-auth-system.html">
+              <div class="panel"><img class="frame__img" src="../img/projetos/secure-auth.png" alt="" width="840" height="543" loading="lazy"></div>
+              <span class="t-card">Secure Authentication System</span>
+              <span class="t-small muted">Bloqueia força bruta e sequestro de sessão</span>
+            </a>
+            <a class="menu-card span-3" href="../projetos/email-header-analyzer.html">
+              <div class="panel"><img class="frame__img" src="../img/projetos/email-header-analyzer.png" alt="" width="1421" height="683" loading="lazy"></div>
+              <span class="t-card">Email Header &amp; Phishing Analyzer</span>
+              <span class="t-small muted">Explica o risco de cada cabeçalho</span>
+            </a>
+            <a class="menu-card span-3" href="../projetos/input-validation-security.html">
+              <div class="panel"><img class="frame__img" src="../img/projetos/input-validation.png" alt="" width="533" height="374" loading="lazy"></div>
+              <span class="t-card">Input Validation &amp; XSS Mitigation</span>
+              <span class="t-small muted">Barra XSS com allowlist e CSP</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav__item"><a class="nav__link" href="../index.html#metodo">Método</a></div>
+      <div class="nav__item"><a class="nav__link" href="../index.html#sobre">Sobre</a></div>
+      <div class="nav__item"><a class="nav__link" href="../index.html#ferramentas">Ferramentas</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__link nav__lang" href="email-header-analyzer-es.html" hreflang="es" lang="es">ES</a><a class="nav__link nav__lang" href="email-header-analyzer-en.html" hreflang="en" lang="en">EN</a>
+      <a class="btn btn--primary" href="../cv-pt.pdf" download="CV-Matheus-Alfonso-PT.pdf">Baixar currículo</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
 
-    <main>
-        <section class="project-hero">
-            <div class="container">
-                <a class="backlink" href="../index.html#projects"><i class="fas fa-arrow-left" aria-hidden="true"></i> Voltar aos projetos</a>
-                <div class="eyebrow"><i class="fas fa-envelope-open-text" aria-hidden="true"></i> PHISHING TRIAGE · PHP</div>
-                <h1>Email Header &amp; Phishing Analyzer</h1>
-                <p class="question">O que os cabeçalhos de um e-mail revelam sobre quem realmente o enviou?</p>
-                <p class="lead">Ferramenta web de triagem: você cola os cabeçalhos brutos de um e-mail suspeito e recebe os indicadores do remetente, os resultados de SPF/DKIM/DMARC, a checagem de alinhamento de domínios e um score de risco de 0 a 100 com a explicação de cada ponto.</p>
-                <div class="pills"><span>PHP 8</span><span>Regex</span><span>SPF / DKIM / DMARC</span><span>RFC 5322</span><span>Content-Security-Policy</span></div>
-                <div class="buttons">
-                    <a class="btn primary" href="https://github.com/MattheusAlfonso/email-header-analyzer" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Ver código no GitHub</a>
-                </div>
-            </div>
-        </section>
+<main id="top">
+  <section class="section proj-hero" aria-labelledby="hero-h">
+    <div class="wrap">
+      <a class="proj-back" href="../index.html#projetos">← Voltar aos projetos</a>
+      <p class="t-label muted">Phishing triage · PHP</p>
+      <h1 id="hero-h">Email Header &amp; Phishing Analyzer</h1>
+      <div class="grid grid--top proj-hero__row">
+        <p class="span-6 proj-q">O que os cabeçalhos de um e-mail revelam sobre quem realmente o enviou?</p>
+        <div class="span-5 start-8">
+          <p class="muted">Ferramenta web de triagem: você cola os cabeçalhos brutos de um e-mail suspeito e recebe os indicadores do remetente, os resultados de SPF/DKIM/DMARC, a checagem de alinhamento de domínios e um score de risco de 0 a 100 com a explicação de cada ponto.</p>
+          <ul class="pills"><li>PHP 8</li><li>Regex</li><li>SPF / DKIM / DMARC</li><li>RFC 5322</li><li>Content-Security-Policy</li></ul>
+          <div class="btn-row"><a class="btn btn--primary" href="https://github.com/MattheusAlfonso/email-header-analyzer" target="_blank" rel="noopener noreferrer">Ver o código no GitHub<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
+        </div>
+      </div>
+      <div class="frame proj-shot"><img class="shot" src="../img/projetos/email-header-analyzer.png" alt="Análise de cabeçalhos de um e-mail de phishing, com o score de risco e a explicação de cada ponto." width="1421" height="683" fetchpriority="high"></div>
+    </div>
+  </section>
 
-        <section class="section">
-            <div class="container">
-                <div class="section-heading">
-                    <div class="eyebrow">Por dentro do projeto</div>
-                    <h2>Do problema à solução</h2>
-                </div>
-                <div class="detail-grid"><div class="detail-block"><h3>Objetivo</h3><p>Nasceu do meu trabalho com conscientização e prevenção de phishing: dar evidência objetiva para decidir se um e-mail é uma ameaça.</p></div><div class="detail-block"><h3>Como funciona</h3><p>Cada indicador soma pontos: DMARC fail (+30), SPF fail (+25), DKIM fail (+25), Reply-To em outro domínio (+20, tática clássica de BEC) e Return-Path divergente (+15). Subdomínios do mesmo domínio contam como alinhados.</p></div><div class="detail-block"><h3>Decisões de parsing</h3><p>Os cabeçalhos são buscados no início da linha (<code>^From:</code>), para <code>X-Original-From</code> não ser confundido com <code>From</code>. Cabeçalhos dobrados são desdobrados conforme a RFC 5322. O texto é analisado cru e escapado só na saída.</p></div><div class="detail-block"><h3>Segurança da própria ferramenta</h3><p>Ela processa texto controlado pelo atacante, então também é endurecida: toda saída é codificada em HTML, a entrada é limitada a 64 KB e uma Content-Security-Policy estrita bloqueia qualquer script.</p></div></div>
-                <h3 class="subhead">Destaques</h3>
-                <div class="pills highlight"><span>Score 0–100 explicado</span><span>SPF · DKIM · DMARC</span><span>Detecção de BEC</span><span>RFC 5322</span><span>Entrada limitada a 64 KB</span></div>
-            </div>
-        </section>
+  <section class="section" aria-labelledby="inside-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="inside-h">Do problema à solução</h2></div>
+      <div class="proj-blocks">
+          <article class="card proj-block"><h3>Objetivo</h3><p>Nasceu do meu trabalho com conscientização e prevenção de phishing: dar evidência objetiva para decidir se um e-mail é uma ameaça.</p></article>
+          <article class="card proj-block"><h3>Como funciona</h3><p>Cada indicador soma pontos: DMARC fail (+30), SPF fail (+25), DKIM fail (+25), Reply-To em outro domínio (+20, tática clássica de BEC) e Return-Path divergente (+15). Subdomínios do mesmo domínio contam como alinhados.</p></article>
+          <article class="card proj-block"><h3>Decisões de parsing</h3><p>Os cabeçalhos são buscados no início da linha (<code>^From:</code>), para <code>X-Original-From</code> não ser confundido com <code>From</code>. Cabeçalhos dobrados são desdobrados conforme a RFC 5322. O texto é analisado cru e escapado só na saída.</p></article>
+          <article class="card proj-block"><h3>Segurança da própria ferramenta</h3><p>Ela processa texto controlado pelo atacante, então também é endurecida: toda saída é codificada em HTML, a entrada é limitada a 64 KB e uma Content-Security-Policy estrita bloqueia qualquer script.</p></article>
+      </div>
+      <h3 class="proj-sub">Destaques</h3>
+      <ul class="pills pills--accent"><li>Score 0–100 explicado</li><li>SPF · DKIM · DMARC</li><li>Detecção de BEC</li><li>RFC 5322</li><li>Entrada limitada a 64 KB</li></ul>
+    </div>
+  </section>
 
-        <section class="section alt">
-            <div class="container">
-                <div class="section-heading">
-                    <div class="eyebrow">Telas</div>
-                    <h2>O projeto funcionando</h2>
-                </div>
-                <div class="shots"><figure class="shot"><img src="https://raw.githubusercontent.com/MattheusAlfonso/email-header-analyzer/main/preview.png" alt="Análise de cabeçalhos de um e-mail de phishing, com o score de risco e a explicação de cada ponto." width="1421" height="683"><figcaption>Análise de cabeçalhos de um e-mail de phishing, com o score de risco e a explicação de cada ponto.</figcaption></figure></div>
-                <h3 class="subhead">Como rodar</h3>
-                <pre class="code"><code>git clone https://github.com/MattheusAlfonso/email-header-analyzer.git
+  <section class="section" aria-labelledby="screens-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="screens-h">Como rodar</h2></div>
+      
+      <pre class="code"><code>git clone https://github.com/MattheusAlfonso/email-header-analyzer.git
 cd email-header-analyzer
 php -S localhost:8000</code></pre>
-                <div class="project-nav">
-                    <a class="backlink" href="../index.html#projects"><i class="fas fa-arrow-left" aria-hidden="true"></i> Voltar aos projetos</a>
-                    <a class="next-link" href="input-validation-security.html">
-                        <span>Próximo projeto</span><strong>Input Validation &amp; XSS Mitigation <i class="fas fa-arrow-right" aria-hidden="true"></i></strong>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+      <div class="proj-nav">
+        <a class="proj-back" href="../index.html#projetos">← Voltar aos projetos</a>
+        <a class="proj-next" href="input-validation-security.html"><span class="muted">Próximo projeto</span><strong>Input Validation &amp; XSS Mitigation <svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></strong></a>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <footer class="footer">
-        <div class="container">&copy; 2026 Matheus Alfonso · Portfólio de Cibersegurança</div>
-    </footer>
+<footer class="footer closing footer--dark ground-inverse" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--word">
+      <div class="section-head--split">
+        <div><h2 id="close-h">Vamos falar de uma vaga</h2><p class="t-lead">Aberto a vagas remotas e de relocação em cibersegurança e segurança de aplicações.</p></div>
+        <a class="btn btn--primary" href="../cv-pt.pdf" download="CV-Matheus-Alfonso-PT.pdf">Baixar currículo<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      </div>
+      <p class="close__word" aria-hidden="true">Matheus Alfonso</p>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="../index.html#top"><span class="mark" data-mark="dots" aria-hidden="true"></span>Matheus Alfonso</a>
+          <p class="footer__lede">Cibersegurança, triagem de phishing e AppSec.</p>
+        </div>
+        <div class="span-2 footer__col"><h3>Projetos</h3><ul><li><a href="../projetos/pythreatintel.html">PyThreatIntel</a></li><li><a href="../projetos/secure-auth-system.html">Secure Authentication System</a></li><li><a href="../projetos/email-header-analyzer.html">Email Header &amp; Phishing Analyzer</a></li><li><a href="../projetos/input-validation-security.html">Input Validation &amp; XSS Mitigation</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Nesta página</h3><ul>
+          <li><a href="../index.html#triagem">Triagem</a></li><li><a href="../index.html#metodo">Método</a></li>
+          <li><a href="../index.html#sobre">Sobre</a></li><li><a href="../index.html#ferramentas">Ferramentas</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Contato</h3><ul>
+          <li><a href="https://www.linkedin.com/in/mattheusalfonso" target="_blank" rel="noopener noreferrer">LinkedIn</a></li><li><a href="https://github.com/MattheusAlfonso" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://wa.me/5562920038598?text=Ol%C3%A1%20Matheus,%20vi%20seu%20portf%C3%B3lio%20de%20Ciberseguran%C3%A7a%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer">WhatsApp</a></li><li><a href="mailto:ederson.alfonso@icloud.com">E-mail</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Idioma</h3><ul><li><a href="email-header-analyzer.html" aria-current="true">Português</a></li><li><a href="email-header-analyzer-es.html" hreflang="es" lang="es">Español</a></li><li><a href="email-header-analyzer-en.html" hreflang="en" lang="en">English</a></li></ul></div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 Matheus Alfonso</span>
+        <div class="socials"></div>
+        <span class="credits">Nomes e logos de produtos são marcas de seus donos.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<nav class="actionbar" aria-label="Ações rápidas">
+  <a class="btn btn--primary" href="../cv-pt.pdf" download="CV-Matheus-Alfonso-PT.pdf">Baixar currículo</a>
+</nav>
+<script type="module" src="../assets/system.js"></script>
+<script type="module" src="../assets/motion/motion.js"></script>
+<script type="module" src="../assets/layout/layout.js"></script>
 </body>
 </html>
